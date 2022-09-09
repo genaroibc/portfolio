@@ -1,0 +1,11 @@
+@keyframes typingWord {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes lineBlink {
+  50% {
+    border-right-color: inherit;
+  }
+}
