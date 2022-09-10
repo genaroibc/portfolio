@@ -24,7 +24,7 @@ const STSubTitle = styled.h2`
 
   font-size: 6vw;
 
-  opacity: 0.7;
+  color: #fff9;
 
   &::after,
   &::before {
@@ -40,10 +40,15 @@ const STSubTitle = styled.h2`
     content: "/>";
     padding-left: 0.4rem;
   }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 5rem;
+  }
 `;
 
 const STTitle = styled.h1`
   ${COMMON_STYLES}
+  max-width: 1400px;
   width: 15ch;
 
   border-right-width: 15px;
@@ -54,6 +59,10 @@ const STTitle = styled.h1`
   font-size: 10vw;
 
   animation: typingWord 3.5s steps(15), lineBlink 0.23s 16 step-end;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 8rem;
+  }
 `;
 
 export default function Hero() {
