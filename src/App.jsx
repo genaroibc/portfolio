@@ -1,13 +1,14 @@
 import "./styles/App.css";
 import Hero from "./components/Hero";
 import Header from "./components/Header";
+import About from "./components/About";
 
 function App() {
   return (
     <div>
       <Header />
       <Hero />
-      <h1>My portfolio!</h1>
+      <About />
     </div>
   );
 }
