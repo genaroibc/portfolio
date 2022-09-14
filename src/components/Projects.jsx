@@ -40,7 +40,7 @@ const STDescription = styled.div`
 
 export default function Projects() {
   return (
-    <section>
+    <section id="projects-section">
       <h2>My projects</h2>
       <h3>Projects i've worked in:</h3>
       <STFlexCont bgCol="var(--main-color)">

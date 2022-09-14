@@ -28,7 +28,7 @@ const STPicture = styled.picture`
 
 export default function About() {
   return (
-    <section>
+    <section id="about-section">
       <STContFlex bgCol="var(--main-color)">
         <STPicture>
           <STImg src="/vite.svg" alt="my profile photo" />
