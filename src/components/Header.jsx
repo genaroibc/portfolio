@@ -14,16 +14,12 @@ const STHeader = styled.header`
 
   background-color: var(--main-color);
 
-  label:has(input:checked) ~ nav {
-    top: 0;
-  }
-
   @media screen and (min-width: 765px) {
-    label:has(input:checked) ~ nav {
+    nav.menu-visible {
       top: unset;
     }
 
-    label {
+    button {
       display: none;
     }
 
@@ -64,17 +60,35 @@ const STNav = styled.nav`
   transition: top 0.3s ease;
 
   background-color: var(--secondary-color);
+
+  &.menu-visible {
+    top: 0;
+
+    & ~ button {
+      span:first-child {
+        transform: rotate(34.5deg) scaleX(1.2);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-34.5deg) scaleX(1.2);
+      }
+    }
+  }
 `;
 
-const STHamburgerLabel = styled.label`
+const STHamburgerBtn = styled.button`
   position: absolute;
   bottom: 1vh;
   right: calc(10vw + 2.5rem);
   top: 87vh;
   z-index: 1000;
 
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   padding: 0.8rem;
   border-radius: 5px;
   border: 0;
@@ -97,43 +111,47 @@ const STHamburgerLabel = styled.label`
 
     background-color: #fff;
   }
-
-  &:has(input:checked) {
-    span:first-child {
-      transform: rotate(34deg) scaleX(1.2);
-    }
-
-    span:nth-child(2) {
-      opacity: 0;
-    }
-
-    span:nth-child(3) {
-      transform: rotate(-34deg) scaleX(1.2);
-    }
-  }
-
-  input {
-    display: none;
-  }
 `;
 
 export default function Header() {
+  // const $hamburgerMenu = document.getElementById("hamburger-menu");
+
+  const closeMenu = () => {
+    document.getElementById("hamburger-menu").classList.remove("menu-visible");
+  };
+
   return (
     <STHeader>
       <img src="/vite.svg" alt="vite logotype" />
-      <STHamburgerLabel htmlFor="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        <input type="checkbox" id="hamburger-menu" />
-      </STHamburgerLabel>
-      <STNav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Proyects</a>
-        <a href="#">Experience</a>
-        <a href="#">Contact</a>
+      <STNav id="hamburger-menu">
+        <a onClick={closeMenu} href="#hero-section">
+          Home
+        </a>
+        <a onClick={closeMenu} href="#about-section">
+          About
+        </a>
+        <a onClick={closeMenu} href="#projects-section">
+          Proyects
+        </a>
+        <a onClick={closeMenu} href="#">
+          Experience
+        </a>
+        <a onClick={closeMenu} href="#">
+          Contact
+        </a>
       </STNav>
+      <STHamburgerBtn
+        onClick={() =>
+          document
+            .getElementById("hamburger-menu")
+            .classList.toggle("menu-visible")
+        }
+        id="hamburger-menu-btn"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </STHamburgerBtn>
     </STHeader>
   );
 }
