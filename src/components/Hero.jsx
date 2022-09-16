@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import styled from "styled-components";
 
 const COMMON_STYLES = `
+  box-sizing: content-box;
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
-
 
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
