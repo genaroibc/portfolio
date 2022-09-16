@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --main-color: #143f6b;
-  --secondary-color: #f55353;
-  --terciary-color: #feb139;
-  --complement-color: #f6f54d;
+  --main-color: #311d3f;
+  --secondary-color: #522546;
+  --terciary-color: #88304e;
+  --complement-color: #e23e57;
 
   font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -11,7 +15,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--main-color);
 
   scroll-behavior: smooth;
 
@@ -25,6 +29,7 @@
 img,
 svg {
   max-width: 100%;
+  object-fit: cover;
   height: auto;
 }
 
@@ -78,4 +83,18 @@ section {
 p {
   line-height: 1.8;
   font-size: 1.2rem;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+
+@media screen and (min-width: 765px) {
+  p {
+    font-size: 1.5rem;
+  }
 }

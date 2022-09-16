@@ -12,7 +12,7 @@ const STHeader = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 
   @media screen and (min-width: 765px) {
     nav.menu-visible {
