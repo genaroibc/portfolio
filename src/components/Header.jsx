@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const STHeader = styled.header`
   position: fixed;
+  z-index: 800;
   top: 0;
 
   width: 100%;
@@ -25,7 +26,7 @@ const STHeader = styled.header`
 
     nav {
       position: unset;
-
+      z-index: unset;
       max-width: 1000px;
       width: 80%;
       height: auto;
@@ -36,6 +37,7 @@ const STHeader = styled.header`
 
       background-color: inherit;
 
+      clip-path: unset;
       a {
         display: block;
       }
@@ -46,7 +48,7 @@ const STHeader = styled.header`
 const STNav = styled.nav`
   position: absolute;
   left: 0;
-  top: -100vh;
+  top: -15vh;
   z-index: 900;
 
   width: 100vw;
@@ -56,12 +58,13 @@ const STNav = styled.nav`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  transition: top 0.3s ease;
+  clip-path: circle(0 at 50% 0);
+  transition: 0.7s ease;
 
   background-color: var(--secondary-color);
 
   &.menu-visible {
+    clip-path: circle(100% at 50% 50%);
     top: 0;
 
     & ~ button {
@@ -112,9 +115,8 @@ const STHamburgerBtn = styled.button`
   }
 `;
 
+// const $hamburgerMenu = document.getElementById("hamburger-menu");
 export default function Header() {
-  // const $hamburgerMenu = document.getElementById("hamburger-menu");
-
   const closeMenu = () => {
     document.getElementById("hamburger-menu").classList.remove("menu-visible");
   };
