@@ -1,0 +1,27 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Tic tac toe",
+    "technologies": ["js", "react", "css", "html", "github"],
+    "imgUrl": "/img/tictactoe.png",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
+    "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
+    "projectUrl": "https://tictactoe2022.netlify.app/"
+  },
+  {
+    "id": "proj-2",
+    "title": "Shopping cart",
+    "technologies": ["js", "react", "css", "html", "github"],
+    "imgUrl": "/img/tictactoe.png",
+    "placeImgUrl": "https://placeimg.com/600/600/arch",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?"
+  },
+  {
+    "id": "proj-3",
+    "title": "Memoization",
+    "technologies": ["js", "react", "css", "html", "github"],
+    "imgUrl": "/img/tictactoe.png",
+    "placeImgUrl": "https://placeimg.com/600/600/nature",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?"
+  }
+]
