@@ -2,16 +2,20 @@ import styled from "styled-components";
 
 export const STFlexCont = styled.div`
   width: 100%;
-  margin: auto;
-  padding: 0 1rem;
+
+  margin: 1rem auto 0;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: ${({ smFlexDir }) => smFlexDir || "column"};
 
   border-radius: 5px;
-  background-color: ${({ bgCol }) => bgCol || "initial"};
+  background-color: ${({ bgCol }) => bgCol || "var(--terciary-color)"};
 
-  @media screen and (min-width: 765px) {
-    display: flex;
+  @media screen and (min-width: 992px) {
     flex-direction: ${({ flexDir }) => flexDir || "initial"};
     text-align: left;
-    gap: 1rem;
+    gap: 2rem;
   }
 `;
