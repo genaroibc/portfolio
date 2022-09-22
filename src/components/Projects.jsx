@@ -1,45 +1,41 @@
 import { useEffect } from "react";
 import styled from "styled-components";
+import { v4 as uuid } from "uuid";
 import { STFlexCont } from "./shared/STFlexCont";
 import { STImg } from "./shared/STImg";
 import { STPicture } from "./shared/STPicture";
-
+import projectsConfig from "../assets/projectsConfig.json";
+import { STSectionTitle } from "./shared/styled";
+import { Icon } from "./shared/Icon";
 const SLIDER_CLASS = "slider-visible";
 
-const slidesConfig = [
-  {
-    id: "proj-1",
-    imgUrl: "https://placeimg.com/600/600/nature",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
-  },
-  {
-    id: "proj-2",
-    imgUrl: "/img/tictactoe.png",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
-  },
-  {
-    id: "proj-3",
-    imgUrl: "https://placeimg.com/600/600/arch",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
-  },
-];
-
 const StNav = styled.nav`
-  width: 100%;
-  max-width: 300px;
-  background-color: var(--terciary-color);
   display: flex;
   justify-content: space-evenly;
+
   margin: auto;
+  margin-top: 1rem;
+
+  width: 100%;
+  max-width: 300px;
+
+  position: sticky;
+  bottom: 2vh;
+
+  background-color: var(--main-color);
+  padding: 1rem 0;
+  border-radius: 10px;
 
   button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     border-radius: 50%;
   }
+`;
+
+const STSubtitle = styled.h4`
+  font-size: 2.5rem;
+  margin: 1rem;
 `;
 
 const STSlide = styled(STFlexCont)`
@@ -56,13 +52,61 @@ const STSlide = styled(STFlexCont)`
   }
 `;
 
+const STIconsCont = styled.div`
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+
+  @media screen and (min-width: 765px) {
+    margin: unset;
+    align-self: flex-end;
+  }
+`;
+
+const STIcon = styled.i`
+  width: 40px;
+  height: auto;
+
+  text-align: center;
+
+  border-radius: 50%;
+`;
+
+const STSlidePicture = styled(STPicture)`
+  position: relative;
+  overflow: hidden;
+
+  div {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+
+    transition: 0.5s;
+    opacity: 0.6;
+
+    background-color: #000;
+  }
+
+  &:hover div {
+    transform: translateY(0);
+  }
+`;
+
 export default function Projects() {
   useEffect(() => {
     document
-      .getElementById(slidesConfig[0].id)
+      .getElementById(projectsConfig[0].id)
       .classList.add(`${SLIDER_CLASS}`);
   }, []);
-
   const toggleSlideVisibility = id => {
     document
       .querySelectorAll(`.${SLIDER_CLASS}`)
@@ -73,25 +117,53 @@ export default function Projects() {
 
   return (
     <section id="projects-section">
-      <h2>My projects</h2>
-      <h3>Projects i've worked in:</h3>
+      <STSectionTitle>My projects</STSectionTitle>
+      <div style={{ position: "relative" }}>
+        {projectsConfig.map(
+          ({
+            description,
+            id,
+            imgUrl,
+            projectUrl = "#",
+            repoUrl = "#",
+            technologies = [],
+            title,
+          }) => (
+            <STSlide key={uuid()} id={id}>
+              <STSlidePicture>
+                <div>
+                  <a target="_blank" href={repoUrl}>
+                    <Icon title="sourcecode" />
+                  </a>
+                  <a target="_blank" href={projectUrl}>
+                    <Icon title="newtab" />
+                  </a>
+                </div>
+                <STImg src={imgUrl} alt="img alternative" />
+              </STSlidePicture>
 
-      {slidesConfig.map(({ id, imgUrl, description }) => (
-        <STSlide id={id}>
-          <STPicture>
-            <STImg src={imgUrl} alt="" />
-          </STPicture>
-
-          <STFlexCont>
-            <p>{description}</p>
-          </STFlexCont>
-        </STSlide>
-      ))}
-      <StNav>
-        {slidesConfig.map(({ id }) => (
-          <button onClick={() => toggleSlideVisibility(id)}> &bull;</button>
-        ))}
-      </StNav>
+              <STFlexCont flexDir="column">
+                <STSubtitle>{title}</STSubtitle>
+                <p>{description}</p>
+                <STIconsCont smFlexDir="row">
+                  {technologies.map(item => (
+                    <STIcon key={uuid()}>
+                      <Icon className="animated" title={item}></Icon>
+                    </STIcon>
+                  ))}
+                </STIconsCont>
+              </STFlexCont>
+            </STSlide>
+          )
+        )}
+        <StNav>
+          {projectsConfig.map(({ id }, index) => (
+            <button key={uuid()} onClick={() => toggleSlideVisibility(id)}>
+              {index + 1}
+            </button>
+          ))}
+        </StNav>
+      </div>
     </section>
   );
 }
