@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 const COMMON_STYLES = `
@@ -28,7 +27,7 @@ const STSubTitle = styled.h2`
 
   &::after,
   &::before {
-    color: var(--secondary-color);
+    color: var(--complement-color);
   }
 
   &::before {

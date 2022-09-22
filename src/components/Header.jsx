@@ -63,6 +63,10 @@ const STNav = styled.nav`
 
   background-color: var(--secondary-color);
 
+  a {
+    font-size: 1.3rem;
+  }
+
   &.menu-visible {
     clip-path: circle(100% at 50% 50%);
     top: 0;
@@ -115,7 +119,6 @@ const STHamburgerBtn = styled.button`
   }
 `;
 
-// const $hamburgerMenu = document.getElementById("hamburger-menu");
 export default function Header() {
   const closeMenu = () => {
     document.getElementById("hamburger-menu").classList.remove("menu-visible");
