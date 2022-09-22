@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import styled from "styled-components";
-import { v4 as uuid } from "uuid";
-import { STFlexCont } from "./shared/STFlexCont";
-import { STImg } from "./shared/STImg";
-import { STPicture } from "./shared/STPicture";
-import projectsConfig from "../assets/projectsConfig.json";
-import { STSectionTitle } from "./shared/styled";
+import { STSectionTitle, STImg, STFlexCont, STPicture } from "./shared/styled";
 import { Icon } from "./shared/Icon";
+
+import { useEffect } from "react";
+import { v4 as uuid } from "uuid";
+
+import styled from "styled-components";
+import projectsConfig from "../assets/projectsConfig.json";
+
 const SLIDER_CLASS = "slider-visible";
 
 const StNav = styled.nav`

@@ -1,7 +1,4 @@
-import { STFlexCont } from "./shared/STFlexCont";
-import { STImg } from "./shared/STImg";
-import { STPicture } from "./shared/STPicture";
-import { STSectionTitle } from "./shared/styled";
+import { STSectionTitle, STPicture, STImg, STFlexCont } from "./shared/styled";
 
 export default function About() {
   return (
