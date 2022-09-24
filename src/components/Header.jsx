@@ -30,7 +30,6 @@ const STHeader = styled.header`
       max-width: 1000px;
       width: 80%;
       height: auto;
-      margin: auto;
 
       flex-direction: row;
       justify-content: space-around;

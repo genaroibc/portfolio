@@ -55,7 +55,7 @@ const STTitle = styled.h1`
 
   margin-bottom: 0.8rem;
 
-  font-size: 10vw;
+  font-size: 9vw;
 
   animation: typingWord 3.5s steps(15), lineBlink 0.23s 16 step-end;
 
