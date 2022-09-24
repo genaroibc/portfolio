@@ -2,7 +2,7 @@ import { STSectionTitle, STPicture, STImg, STFlexCont } from "./shared/styled";
 
 export default function About() {
   return (
-    <section id="about-section">
+    <section id="about">
       <STSectionTitle>About me</STSectionTitle>
       <STFlexCont>
         <STPicture>

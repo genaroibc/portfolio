@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { v4 as uuid } from "uuid";
+import linksConfig from "../assets/linksConfig.json";
 
 const STHeader = styled.header`
   position: fixed;
@@ -118,30 +120,20 @@ const STHamburgerBtn = styled.button`
   }
 `;
 
-export default function Header() {
-  const closeMenu = () => {
-    document.getElementById("hamburger-menu").classList.remove("menu-visible");
-  };
+const closeMenu = () => {
+  document.getElementById("hamburger-menu").classList.remove("menu-visible");
+};
 
+export default function Header() {
   return (
     <STHeader>
       <img src="/vite.svg" alt="vite logotype" />
       <STNav id="hamburger-menu">
-        <a onClick={closeMenu} href="#hero-section">
-          Home
-        </a>
-        <a onClick={closeMenu} href="#about-section">
-          About
-        </a>
-        <a onClick={closeMenu} href="#projects-section">
-          Proyects
-        </a>
-        <a onClick={closeMenu} href="#">
-          Experience
-        </a>
-        <a onClick={closeMenu} href="#">
-          Contact
-        </a>
+        {linksConfig.map(({ href, title }) => (
+          <a key={uuid()} onClick={closeMenu} href={href}>
+            {title}
+          </a>
+        ))}
       </STNav>
       <STHamburgerBtn
         onClick={() =>

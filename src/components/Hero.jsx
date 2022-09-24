@@ -66,7 +66,7 @@ const STTitle = styled.h1`
 
 export default function Hero() {
   return (
-    <section id="hero-section">
+    <section id="hero">
       <STTitle>Genaro Bonavita</STTitle>
       <STSubTitle>Frontend-Developer</STSubTitle>
     </section>

@@ -116,7 +116,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects-section">
+    <section id="projects">
       <STSectionTitle>My projects</STSectionTitle>
       <div style={{ position: "relative" }}>
         {projectsConfig.map(
