@@ -40,12 +40,15 @@ const STSubtitle = styled.h4`
 
 const STSlide = styled(STFlexCont)`
   display: none;
+  min-height: 800px;
 
   &.${SLIDER_CLASS} {
     display: block;
   }
 
   @media screen and (min-width: 765px) {
+    min-height: 550px;
+
     &.${SLIDER_CLASS} {
       display: flex;
     }
