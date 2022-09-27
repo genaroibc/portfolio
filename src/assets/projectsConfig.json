@@ -1,27 +1,28 @@
 [
   {
     "id": "proj-1",
-    "title": "Tic tac toe",
-    "technologies": ["js", "react", "css", "html", "github"],
+    "title": "Tic Tac Toe",
+    "technologies": ["js", "css", "html"],
     "imgUrl": "/img/tictactoe.png",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
+    "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
-    "projectUrl": "https://tictactoe2022.netlify.app/"
+    "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
   },
   {
     "id": "proj-2",
-    "title": "Shopping cart",
-    "technologies": ["js", "react", "css", "html", "github"],
+    "title": "Weather App",
+    "technologies": ["js", "react", "css", "html"],
     "imgUrl": "/img/tictactoe.png",
-    "placeImgUrl": "https://placeimg.com/600/600/arch",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?"
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
+    "repoUrl": "https://github.com/GenaroIBC/weather-app",
+    "projectUrl": "https://genaroibc.github.io/weather-app"
   },
   {
     "id": "proj-3",
     "title": "Memoization",
     "technologies": ["js", "react", "css", "html", "github"],
     "imgUrl": "/img/tictactoe.png",
-    "placeImgUrl": "https://placeimg.com/600/600/nature",
+
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?"
   }
 ]
