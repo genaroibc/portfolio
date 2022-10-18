@@ -30,19 +30,19 @@ export const STFlexCont = styled.div`
   width: 100%;
 
   margin: 1rem auto 0;
-  padding: 1rem;
+  padding: ${({ padding }) => padding ?? "1rem"};
 
   display: flex;
   justify-content: space-evenly;
-  flex-direction: ${({ smFlexDir }) => smFlexDir || "column"};
+  flex-direction: ${({ smFlexDir }) => smFlexDir ?? "column"};
 
   border-radius: 5px;
-  background-color: ${({ bgCol }) => bgCol || "var(--terciary-color)"};
+  background-color: ${({ bgCol }) => bgCol ?? "var(--terciary-color)"};
 
   @media screen and (min-width: 992px) {
-    flex-direction: ${({ flexDir }) => flexDir || "initial"};
-    justify-content: ${({ jusCont }) => jusCont || "initial"};
-    align-items: ${({ alItems }) => alItems || "initial"};
+    flex-direction: ${({ flexDir }) => flexDir ?? "initial"};
+    justify-content: ${({ jusCont }) => jusCont ?? "initial"};
+    align-items: ${({ alItems }) => alItems ?? "initial"};
     text-align: left;
     gap: 2rem;
   }
