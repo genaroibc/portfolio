@@ -13,7 +13,7 @@
     "title": "Weather App",
     "technologies": ["js", "react", "css", "html"],
     "imgUrl": "/img/tictactoe.png",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?",
+    "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/weather-app",
     "projectUrl": "https://genaroibc.github.io/weather-app"
   },
@@ -23,6 +23,6 @@
     "technologies": ["js", "react", "css", "html", "github"],
     "imgUrl": "/img/tictactoe.png",
 
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur minus in reprehenderit, fugiat expedita reiciendis saepe, consectetur consequuntur libero ipsum repellat ab laboriosam autem animi beatae dicta, nulla voluptatum?"
+    "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features."
   }
 ]
