@@ -10,8 +10,8 @@
   }
 }
 
-/* @keyframes svgBrightness {
+@keyframes svgBrightness {
   50% {
-    border-: inherit;
+    filter: brightness(100%);
   }
-} */
+}

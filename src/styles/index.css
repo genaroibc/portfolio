@@ -6,7 +6,6 @@
   margin: 0 auto;
   max-width: 1400px;
   text-align: center;
-  background-color: #232323;
 }
 
 /* @media screen and (min-width: 1400px) {
@@ -23,6 +22,7 @@
   --terciary-color: #88304e;
   --complement-color: #e23e57;
   --dark-color: #232323;
+
   font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
@@ -30,7 +30,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: darkslategrey;
+  background-color: var(--dark-color);
 
   scroll-behavior: smooth;
 
@@ -54,16 +54,15 @@ svg {
   width: 40px;
 }
 
-svg.animated {
-  animation: svgBrightness duration timing-function delay iteration-count
-    direction fill-mode;
+svg.animated:not(:hover) {
+  animation: svgBrightness 5s 0.3s ease-in-out infinite reverse;
   transition: 0.2s;
   filter: brightness(0%);
 }
 
-/* svg.animated:hover {
+svg.animated:hover {
   filter: brightness(100%);
-} */
+}
 
 a {
   font-weight: 500;
@@ -71,10 +70,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   color: #fff;
   text-decoration: underline;
-}
+} */
 
 body {
   margin: 0;
@@ -105,7 +104,7 @@ button:focus-visible {
 section {
   width: 100%;
   max-width: 1400px;
-  margin: auto;
+  margin: 5rem auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
