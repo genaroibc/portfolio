@@ -13,11 +13,16 @@ export default function About() {
           />
         </STPicture>
 
-        <STFlexCont>
+        <STFlexCont flexDir="column" padding="0">
           <p>
-            I am Genaro Bonavita, Frontend Developer, mainly focused in the
-            React ecosystem, with tools like Next.js, React Router, Redux,
-            etc...
+            I am Genaro Bonavita, Frontend Developer, mainly focused on the
+            React ecosystem. I love building applications and products through
+            clean and maintainable code.
+          </p>
+
+          <p>
+            I've been interested in technology since i was a child, and, in
+            2021, i finally started learning about this awesome world.
           </p>
         </STFlexCont>
       </STFlexCont>
