@@ -6,9 +6,11 @@ const STHeader = styled.header`
   position: fixed;
   z-index: 800;
   top: 0;
+  left: 0;
+  right: 0;
 
   width: 100%;
-  min-height: 80px;
+  min-height: 50px;
   padding: 0 2rem;
 
   display: flex;
@@ -18,6 +20,8 @@ const STHeader = styled.header`
   background-color: var(--secondary-color);
 
   @media screen and (min-width: 765px) {
+    min-height: 80px;
+
     nav.menu-visible {
       top: unset;
     }
@@ -29,12 +33,11 @@ const STHeader = styled.header`
     nav {
       position: unset;
       z-index: unset;
-      max-width: 1000px;
-      width: 80%;
+      width: 100%;
       height: auto;
 
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-end;
 
       background-color: inherit;
 
@@ -65,6 +68,7 @@ const STNav = styled.nav`
   background-color: var(--secondary-color);
 
   a {
+    padding: 0 1.5rem;
     font-size: 1.3rem;
   }
 

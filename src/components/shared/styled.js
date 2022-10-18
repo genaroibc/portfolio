@@ -41,6 +41,8 @@ export const STFlexCont = styled.div`
 
   @media screen and (min-width: 992px) {
     flex-direction: ${({ flexDir }) => flexDir || "initial"};
+    justify-content: ${({ jusCont }) => jusCont || "initial"};
+    align-items: ${({ alItems }) => alItems || "initial"};
     text-align: left;
     gap: 2rem;
   }
