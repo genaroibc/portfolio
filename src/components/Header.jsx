@@ -42,32 +42,6 @@ const STHeader = styled.header`
       background-color: inherit;
 
       clip-path: unset;
-
-      a {
-        display: block;
-        position: relative;
-
-        &::after {
-          content: "";
-          background-color: #fff;
-          position: absolute;
-
-          bottom: 0;
-          left: 0;
-          right: 0;
-
-          height: 3px;
-          width: 0;
-          transition: width 0.4s;
-          margin: 0 auto;
-        }
-
-        &:hover {
-          &::after {
-            width: 70%;
-          }
-        }
-      }
     }
   }
 `;
@@ -85,13 +59,14 @@ const STNav = styled.nav`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  gap: 1.8rem;
+
   clip-path: circle(0 at 50% 0);
   transition: 0.7s ease;
 
   background-color: var(--secondary-color);
 
   a {
-    padding: 0 1.5rem;
     font-size: 1.3rem;
   }
 
