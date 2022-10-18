@@ -40,7 +40,6 @@ const STSubtitle = styled.h4`
 
 const STSlide = styled(STFlexCont)`
   display: none;
-  min-height: 800px;
 
   &.${SLIDER_CLASS} {
     display: block;
@@ -121,6 +120,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <STSectionTitle>My projects</STSectionTitle>
+      <h3>Some projects i've worked in:</h3>
       <div style={{ position: "relative" }}>
         {projectsConfig.map(
           ({
