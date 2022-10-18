@@ -42,8 +42,31 @@ const STHeader = styled.header`
       background-color: inherit;
 
       clip-path: unset;
+
       a {
         display: block;
+        position: relative;
+
+        &::after {
+          content: "";
+          background-color: #fff;
+          position: absolute;
+
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+          height: 3px;
+          width: 0;
+          transition: width 0.4s;
+          margin: 0 auto;
+        }
+
+        &:hover {
+          &::after {
+            width: 70%;
+          }
+        }
       }
     }
   }
