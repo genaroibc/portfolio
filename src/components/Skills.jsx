@@ -19,7 +19,7 @@ const STSubtitle = styled.h4`
 
 export default function Stack() {
   return (
-    <section>
+    <section id="skills">
       <STSectionTitle>Skills</STSectionTitle>
       <h3>Stack of technologies:</h3>
       <STFlexCont jusCont="center">
@@ -69,15 +69,6 @@ export default function Stack() {
             <Icon key={uuid()} title={el} />
           ))}
         </STArticle>
-        {/* <STArticle>
-          <h3>I'm learning:</h3>
-          <ul>
-          Node Git & GitHub
-          <li>Typescript</li>
-            <li>Express</li>
-            <li>Mongo DB</li>
-          </ul>
-        </STArticle> */}
       </STFlexCont>
     </section>
   );
