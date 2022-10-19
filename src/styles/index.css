@@ -8,14 +8,6 @@
   text-align: center;
 }
 
-/* @media screen and (min-width: 1400px) {
-  #root section {
-    background-color: red;
-    background-color: #fff;
-    max-width: 100%;
-  }
-} */
-
 :root {
   --main-color: #311d3f;
   --secondary-color: #522546;
@@ -56,7 +48,7 @@ svg {
 
 svg.animated:not(:hover) {
   animation: svgBrightness 5s 0.3s ease-in-out infinite reverse;
-  transition: 0.2s;
+  transition: filter 0.4s;
   filter: brightness(0%);
 }
 

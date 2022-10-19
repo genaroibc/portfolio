@@ -41,6 +41,8 @@ const STHeader = styled.header`
 
       background-color: inherit;
 
+      font-size: 1.3rem;
+
       clip-path: unset;
     }
   }
@@ -62,13 +64,11 @@ const STNav = styled.nav`
   gap: 1.8rem;
 
   clip-path: circle(0 at 50% 0);
-  transition: 0.7s ease;
+  transition: clip-path 0.7s ease;
 
   background-color: var(--secondary-color);
 
-  a {
-    font-size: 1.3rem;
-  }
+  font-size: 1.5rem;
 
   &.menu-visible {
     clip-path: circle(100% at 50% 50%);
@@ -115,7 +115,8 @@ const STHamburgerBtn = styled.button`
     height: 3.2px;
     border-radius: 5px;
 
-    transition: all 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+
     transform-origin: left;
 
     background-color: #fff;
