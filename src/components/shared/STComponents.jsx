@@ -8,9 +8,43 @@ export const STPicture = styled.picture`
   justify-content: center;
 `;
 
-export const STSectionTitle = styled.h2`
+const SectionTitle = styled.h2`
   font-size: 3rem;
+  position: relative;
+  line-height: normal;
+
+  width: 100%;
+  margin: 0.7em auto;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 300;
+  color: #fff;
+
+  &:before,
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 0.5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+  }
+
+  &:after {
+    margin: 0 -55% 0 0.5em;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
 `;
+
+export const STSectionTitle = ({ children }) => (
+  <SectionTitle>
+    <span>{children}</span>
+  </SectionTitle>
+);
 
 export const STImg = styled.img`
   border-radius: 10px;
@@ -46,4 +80,12 @@ export const STFlexCont = styled.div`
     text-align: left;
     gap: 2rem;
   }
+`;
+
+export const STSubTitle = styled.h4`
+  padding: ${({ padding }) => padding ?? "initial"};
+  margin: ${({ margin }) => margin ?? "initial"};
+
+  font-size: ${({ fontSize }) => fontSize ?? "2rem"};
+  text-align: ${({ textAlign }) => textAlign ?? "center"};
 `;

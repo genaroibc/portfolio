@@ -1,4 +1,9 @@
-import { STSectionTitle, STPicture, STImg, STFlexCont } from "./shared/styled";
+import {
+  STSectionTitle,
+  STPicture,
+  STImg,
+  STFlexCont,
+} from "./shared/STComponents";
 
 export default function About() {
   return (

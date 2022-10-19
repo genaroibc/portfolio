@@ -1,4 +1,10 @@
-import { STSectionTitle, STImg, STFlexCont, STPicture } from "./shared/styled";
+import {
+  STSectionTitle,
+  STImg,
+  STFlexCont,
+  STPicture,
+  STSubTitle,
+} from "./shared/STComponents";
 import { Icon } from "./shared/Icon";
 
 import { useEffect } from "react";
@@ -31,11 +37,6 @@ const StNav = styled.nav`
     text-align: center;
     border-radius: 50%;
   }
-`;
-
-const STSubtitle = styled.h4`
-  font-size: 2.5rem;
-  margin: 1rem;
 `;
 
 const STSlide = styled(STFlexCont)`
@@ -146,7 +147,9 @@ export default function Projects() {
               </STSlidePicture>
 
               <STFlexCont flexDir="column">
-                <STSubtitle>{title}</STSubtitle>
+                <STSubTitle margin="1rem" fonSize="2.5rem">
+                  {title}
+                </STSubTitle>
                 <p>{description}</p>
                 <STIconsCont smFlexDir="row">
                   {technologies.map(item => (

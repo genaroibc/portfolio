@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "./shared/Icon";
-import { STFlexCont, STSectionTitle } from "./shared/styled";
+import { STFlexCont, STSectionTitle, STSubTitle } from "./shared/STComponents";
 
 const STNav = styled.nav`
   display: flex;
@@ -21,10 +21,6 @@ const STHeader = styled.h3`
   font-size: 1.5rem;
 `;
 
-const STSubTitle = styled.h4`
-  font-size: 1.8rem;
-`;
-
 const STPgph = styled.p`
   font-size: 1.6rem;
   text-align: center;
@@ -34,7 +30,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <STSectionTitle>Contact Me</STSectionTitle>
-      <STSubTitle>Let's build something amazing!</STSubTitle>
+      <STSubTitle fontSize="1.8rem">Let's build something amazing!</STSubTitle>
       <STFlexCont alItems="center" flexDir="column">
         <div>
           <STHeader>You can find me at...</STHeader>
@@ -51,7 +47,9 @@ export default function Contact() {
         </div>
         <div>
           <STHeader>...or also contact me via e-mail:</STHeader>
-          <STPgph>correo@gmail.com</STPgph>
+          <STPgph>
+            <a href="mailto:correo@gmail.com">correo@gmail.com</a>
+          </STPgph>
         </div>
       </STFlexCont>
     </section>

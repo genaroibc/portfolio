@@ -13,7 +13,7 @@ const COMMON_STYLES = `
   line-height: 1;
 `;
 
-const STSubTitle = styled.h2`
+const STSubHeading = styled.h2`
   ${COMMON_STYLES}
   width: 22ch;
 
@@ -45,7 +45,7 @@ const STSubTitle = styled.h2`
   }
 `;
 
-const STTitle = styled.h1`
+const STHeading = styled.h1`
   ${COMMON_STYLES}
   max-width: 1400px;
   width: 15ch;
@@ -67,8 +67,8 @@ const STTitle = styled.h1`
 export default function Hero() {
   return (
     <section id="hero">
-      <STTitle>Genaro Bonavita</STTitle>
-      <STSubTitle>Frontend-Developer</STSubTitle>
+      <STHeading>Genaro Bonavita</STHeading>
+      <STSubHeading>Frontend-Developer</STSubHeading>
     </section>
   );
 }
