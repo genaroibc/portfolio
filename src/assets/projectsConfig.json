@@ -2,7 +2,7 @@
   {
     "id": "proj-1",
     "title": "Tic Tac Toe",
-    "technologies": ["js", "css", "html"],
+    "technologies": ["js", "css", "html", "typescript"],
     "imgUrl": "/img/tictactoe.png",
     "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
@@ -11,7 +11,7 @@
   {
     "id": "proj-2",
     "title": "Weather App",
-    "technologies": ["js", "react", "css", "html"],
+    "technologies": ["js", "next", "mongodb", "css", "html", "node", "git"],
     "imgUrl": "/img/tictactoe.png",
     "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/weather-app",
@@ -20,7 +20,7 @@
   {
     "id": "proj-3",
     "title": "Memoization",
-    "technologies": ["js", "react", "css", "html", "github"],
+    "technologies": ["js", "react", "css", "html", "github", "bootstrap"],
     "imgUrl": "/img/tictactoe.png",
 
     "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features."

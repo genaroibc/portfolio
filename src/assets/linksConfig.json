@@ -1,22 +1,22 @@
 [
   {
     "href": "#hero",
-    "title": "Home"
+    "title": "HOME"
   },
   {
     "href": "#about",
-    "title": "About"
+    "title": "ABOUT"
   },
   {
     "href": "#projects",
-    "title": "Projects"
+    "title": "PROJECTS"
   },
   {
     "href": "#skills",
-    "title": "Skills"
+    "title": "SKILLS"
   },
   {
     "href": "#contact",
-    "title": "Contact"
+    "title": "CONTACT"
   }
 ]

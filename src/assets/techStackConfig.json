@@ -1,5 +1,5 @@
 {
-  "learned": ["html", "css", "js", "react"],
-  "learning": ["html", "css", "js", "react"],
+  "learned": ["html", "css", "js", "react", "mongodb", "git"],
+  "learning": ["next", "mongodb", "typescript"],
   "interestedIn": ["html", "css", "js", "react"]
 }
