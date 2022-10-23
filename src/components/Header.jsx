@@ -64,7 +64,7 @@ const STNav = styled.nav`
   gap: 1.8rem;
 
   clip-path: circle(0 at 50% 0);
-  transition: clip-path 0.7s ease;
+  transition: clip-path 0.7s ease, top 0.7s ease;
 
   background-color: var(--secondary-color);
 

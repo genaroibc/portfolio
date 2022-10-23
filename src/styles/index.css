@@ -9,10 +9,16 @@
 }
 
 :root {
+  /* --main-color: #2a0944;
+  --secondary-color: #3fa796;
+  --terciary-color: #fec260;
+  --complement-color: #a10035; */
+
   --main-color: #311d3f;
   --secondary-color: #522546;
   --terciary-color: #88304e;
   --complement-color: #e23e57;
+
   --dark-color: #232323;
 
   font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
@@ -47,7 +53,7 @@ svg {
 }
 
 svg.animated:not(:hover) {
-  animation: svgBrightness 5s 0.3s ease-in-out infinite reverse;
+  /* animation: svgBrightness 5s 0.3s ease-in-out infinite reverse; */
   transition: filter 0.4s;
   filter: brightness(0%);
 }
