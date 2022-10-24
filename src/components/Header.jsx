@@ -93,7 +93,7 @@ const STNav = styled.nav`
 const STHamburgerBtn = styled.button`
   position: absolute;
   right: calc(-2vw + 2.5rem);
-  top: 88vh;
+  top: 84vh;
   z-index: 1000;
 
   width: 4rem;
