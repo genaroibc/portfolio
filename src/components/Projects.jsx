@@ -57,6 +57,7 @@ const STSlide = styled(STFlexCont)`
 
 const STIconsCont = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 400px;
   margin: auto;
@@ -121,7 +122,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <STSectionTitle>My projects</STSectionTitle>
-      <h3>Some projects i've worked in:</h3>
+      <STSubTitle>Some projects i've worked in:</STSubTitle>
       <div style={{ position: "relative" }}>
         {projectsConfig.map(
           ({
@@ -147,7 +148,7 @@ export default function Projects() {
               </STSlidePicture>
 
               <STFlexCont flexDir="column">
-                <STSubTitle margin="1rem" fonSize="2.5rem">
+                <STSubTitle fontWeight={600} margin="1rem" fonSize="2.5rem">
                   {title}
                 </STSubTitle>
                 <p>{description}</p>

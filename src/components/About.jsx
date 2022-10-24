@@ -1,9 +1,14 @@
+import styled from "styled-components";
 import {
   STSectionTitle,
   STPicture,
   STImg,
   STFlexCont,
 } from "./shared/STComponents";
+
+const STPgph = styled.p`
+  font-size: 1.8rem;
+`;
 
 export default function About() {
   return (
@@ -19,16 +24,11 @@ export default function About() {
         </STPicture>
 
         <STFlexCont flexDir="column" padding="0">
-          <p>
+          <STPgph>
             I am Genaro Bonavita, Frontend Developer, mainly focused on the
             React ecosystem. I love building applications and products through
             clean and maintainable code.
-          </p>
-
-          <p>
-            I've been interested in technology since i was a child, and, in
-            2021, i finally started learning about this awesome world.
-          </p>
+          </STPgph>
         </STFlexCont>
       </STFlexCont>
     </section>

@@ -11,7 +11,7 @@ export default function Stack() {
   return (
     <section id="skills">
       <STSectionTitle>Skills</STSectionTitle>
-      <h3>Stack of technologies:</h3>
+      <STSubTitle>Stack of technologies:</STSubTitle>
       <STFlexCont jusCont="center">
         <article>
           <STSubTitle fontSize="1.6rem">I know:</STSubTitle>

@@ -12,6 +12,8 @@ export const STSectionTitle = styled.h2`
   overflow: hidden;
   text-align: center;
 
+  margin: 1rem;
+
   font-size: 3rem;
   line-height: normal;
   font-weight: 400;
@@ -76,8 +78,10 @@ export const STFlexCont = styled.div`
 
 export const STSubTitle = styled.h4`
   padding: ${({ padding }) => padding ?? "initial"};
-  margin: ${({ margin }) => margin ?? "initial"};
+  margin: ${({ margin }) => margin ?? "1.5rem auto 2.5rem"};
 
   font-size: ${({ fontSize }) => fontSize ?? "2rem"};
   text-align: ${({ textAlign }) => textAlign ?? "center"};
+
+  font-weight: ${({ fontWeight }) => fontWeight ?? "400"};
 `;
