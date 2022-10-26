@@ -139,6 +139,7 @@ export default function Header() {
         ))}
       </STNav>
       <STHamburgerBtn
+        aria-label="navigation bar menu"
         onClick={() =>
           document
             .getElementById("hamburger-menu")

@@ -165,7 +165,11 @@ export default function Projects() {
         )}
         <StNav>
           {projectsConfig.map(({ id }, index) => (
-            <button key={uuid()} onClick={() => toggleSlideVisibility(id)}>
+            <button
+              aria-label="projects navigation bar"
+              key={uuid()}
+              onClick={() => toggleSlideVisibility(id)}
+            >
               {index + 1}
             </button>
           ))}
