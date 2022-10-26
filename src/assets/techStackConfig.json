@@ -1,5 +1,15 @@
 {
-  "learned": ["html", "css", "js", "react", "mongodb", "git"],
-  "learning": ["next", "mongodb", "typescript"],
+  "learned": [
+    "html",
+    "css",
+    "js",
+    "react",
+    "node",
+    "git",
+    "next",
+    "bootstrap",
+    "mongodb"
+  ],
+  "learning": ["typescript"],
   "interestedIn": ["html", "css", "js", "react"]
 }
