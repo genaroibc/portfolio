@@ -18,7 +18,7 @@ export default function About() {
         <STPicture>
           <STImg
             rounded
-            src="/img/genaro-bonavita.jpg"
+            src="/img/genaro-bonavita.webp"
             alt="my profile photo"
           />
         </STPicture>
