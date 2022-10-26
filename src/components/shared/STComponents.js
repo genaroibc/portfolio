@@ -44,6 +44,7 @@ export const STImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0px 5px 10px 5px #0005;
+  width: 100%;
 
   ${({ rounded }) =>
     rounded &&
@@ -76,7 +77,7 @@ export const STFlexCont = styled.div`
   }
 `;
 
-export const STSubTitle = styled.h4`
+export const STSubTitle = styled.h3`
   padding: ${({ padding }) => padding ?? "initial"};
   margin: ${({ margin }) => margin ?? "1.5rem auto 2.5rem"};
 

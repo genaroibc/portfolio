@@ -17,6 +17,7 @@ const STWrapper = styled.div`
   }
 
   .tab {
+    font-size: 1.5rem;
     width: 100%;
     color: white;
     overflow: hidden;
@@ -78,7 +79,15 @@ const STWrapper = styled.div`
   }
 `;
 
-const AccordionTab = ({ title, description, id, multiple }) => {
+const STLabel = styled.label`
+  color: #bbb;
+
+  &:hover {
+    color: #fff;
+  }
+`;
+
+const AccordionTab = ({ title, description, id, multiple, style }) => {
   return (
     <>
       <div className="tab">
@@ -87,16 +96,18 @@ const AccordionTab = ({ title, description, id, multiple }) => {
           id={id}
           name={multiple ? "" : RADIO_INPUTS_NAME}
         />
-        <label className="tab-label" htmlFor={id}>
+        <STLabel className="tab-label" htmlFor={id}>
           {title}
-        </label>
-        <div className="tab-content">{description}</div>
+        </STLabel>
+        <div style={style} className="tab-content">
+          {description}
+        </div>
       </div>
     </>
   );
 };
 
-export function Accordion({ multiple = false, data = [] }) {
+export function Accordion({ multiple = false, data = [], style = {} }) {
   return (
     <STWrapper>
       <div className="tabs">
@@ -106,6 +117,7 @@ export function Accordion({ multiple = false, data = [] }) {
             id={uuid()}
             multiple={multiple}
             key={uuid()}
+            style={style}
           />
         ))}
       </div>

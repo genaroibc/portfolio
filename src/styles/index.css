@@ -63,37 +63,16 @@ svg.animated:hover {
 }
 
 a {
-  font-weight: 500;
-  line-height: 1.8;
-  color: #eee;
+  color: inherit;
   text-decoration: none;
-  display: inline-block;
-  position: relative;
 }
 
-a::after {
-  content: "";
-  background-color: #fff;
-  position: absolute;
-  z-index: -0;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-
-  height: 3px;
-  width: 0;
-  transition: width 0.4s;
-  margin: 0 auto;
+li {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: normal;
 }
-
-a:hover::after {
-  color: #fff;
-  width: 100%;
-}
-
-/* a:hover {
-  text-decoration: underline;
-} */
 
 body {
   margin: 0;
