@@ -3,7 +3,7 @@
     "id": "proj-1",
     "title": "Tic Tac Toe",
     "technologies": ["js", "css", "html"],
-    "imgUrl": "/img/tictactoe.png",
+    "imgUrl": "/img/tictactoe.webp",
     "description": "In this version of the well-known Tic Tac Toe, you can play versus the machine, store your points into your device, change players colors and some other funny features.",
     "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
     "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
@@ -12,7 +12,7 @@
     "id": "proj-3",
     "title": "Full-Stack ToDo app",
     "technologies": ["next", "react", "css", "mongodb"],
-    "imgUrl": "/img/fullstack-todo.png",
+    "imgUrl": "/img/fullstack-todo.webp",
     "description": "The typical ToDo application, but integrating client and server sides, with MongoDB Atlas as DB Cloud and the usual features: create, read, update and delete. Oh, and also responsive.",
     "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
     "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
