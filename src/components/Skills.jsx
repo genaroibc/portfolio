@@ -20,69 +20,66 @@ const STIconListItem = styled.li`
   margin: 0.3rem;
 
   background-color: var(--secondary-color);
+  border-radius: 10px;
 `;
 
-const STTechsList = styled.ul`
-  text-align: center;
-
-  @media screen and (min-width: 992px) {
-    width: 70%;
-    margin: auto;
-  }
-`;
+const HARD_SKILLS_DATA = [
+  {
+    title: "🧠 I know",
+    description: (
+      <ul>
+        {learned.map(el => (
+          <STIconListItem key={uuid()}>
+            <Icon title={el} />
+            {el.toUpperCase()}
+          </STIconListItem>
+        ))}
+      </ul>
+    ),
+  },
+  {
+    title: "🌱  I'm learning",
+    description: (
+      <ul>
+        {learning.map(el => (
+          <STIconListItem key={uuid()}>
+            <Icon title={el} />
+            {el.toUpperCase()}
+          </STIconListItem>
+        ))}
+      </ul>
+    ),
+  },
+  {
+    title: "🔎 I'm interested in",
+    description: (
+      <ul>
+        {interestedIn.map(el => (
+          <STIconListItem key={uuid()}>
+            <Icon title={el} />
+            {el.toUpperCase()}
+          </STIconListItem>
+        ))}
+      </ul>
+    ),
+  },
+];
 
 export default function Stack() {
   return (
     <section id="skills">
       <STSectionTitle>Skills</STSectionTitle>
       <STSubTitle>Stack of technologies:</STSubTitle>
-      <STFlexCont flexDir="column" jusCont="center">
-        <article>
-          <STSubTitle fontSize="1.6rem">I know:</STSubTitle>
-          <STTechsList>
-            {learned.map(el => (
-              <STIconListItem key={uuid()}>
-                <Icon title={el} />
-                {el.toUpperCase()}
-              </STIconListItem>
-            ))}
-          </STTechsList>
-        </article>
 
-        <article>
-          <STSubTitle fontSize="1.6rem">I'm learning:</STSubTitle>
-
-          <STTechsList>
-            {learning.map(el => (
-              <STIconListItem key={uuid()}>
-                <Icon title={el} /> {el.toUpperCase()}
-              </STIconListItem>
-            ))}
-          </STTechsList>
-        </article>
-
-        <article>
-          <STSubTitle fontSize="1.6rem">I'm interested in:</STSubTitle>
-
-          <STTechsList>
-            {interestedIn.map(el => (
-              <STIconListItem key={uuid()}>
-                <Icon title={el} />
-
-                {el.toUpperCase()}
-              </STIconListItem>
-            ))}
-          </STTechsList>
-        </article>
-      </STFlexCont>
+      <Accordion
+        style={{ backgroundColor: "steelblue", color: "#fff" }}
+        multiple={true}
+        data={HARD_SKILLS_DATA}
+      />
 
       <STSubTitle>Soft Skills:</STSubTitle>
 
-      <STFlexCont jusCont="center">
-        <article>
-          <Accordion data={SOFT_SKILLS_DATA} />
-        </article>
-      </STFlexCont>
+      <Accordion data={SOFT_SKILLS_DATA} />
     </section>
   );
 }
