@@ -1,57 +1,54 @@
 import styled from "styled-components";
-import { Icon } from "./shared/Icon";
-import { STFlexCont, STSectionTitle, STSubTitle } from "./shared/STComponents";
+import { STSectionTitle, STSubTitle } from "./shared/STComponents";
+import contactList from "../assets/contactList.json";
 
-const STNav = styled.nav`
-  display: flex;
-  justify-content: space-evenly;
-  width: 60%;
-  margin: auto;
+const STContactItem = styled.li`
+  img {
+    align-self: center;
+    margin: 0 auto 1rem;
+    display: block;
+  }
 
   a {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    letter-spacing: 4px;
+    display: block;
   }
 `;
 
-const STHeader = styled.h3`
-  font-size: 1.5rem;
+const STContactList = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: steelblue;
+  padding: 1rem;
+
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+  }
 `;
 
-const STPgph = styled.p`
-  font-size: 1.6rem;
-  text-align: center;
-`;
+const ContactItem = ({ imageSrc, title, href }) => (
+  <STContactItem>
+    <a target="_blank" href={href}>
+      <img src={imageSrc} width={70} height={70} alt={title + " icon"} />
+      {title}
+    </a>
+  </STContactItem>
+);
 
 export default function Contact() {
   return (
     <section id="contact">
       <STSectionTitle>Contact Me</STSectionTitle>
       <STSubTitle fontSize="1.8rem">Let's build something amazing!</STSubTitle>
-      <STFlexCont alItems="center" flexDir="column">
-        <div>
-          <STHeader>You can find me at...</STHeader>
-          <STNav>
-            <a target="_blank" href="https://github.com/GenaroIBC">
-              <Icon title="github" />
-              GitHub
-            </a>
-            <a target="_blank" href="https://github.com/GenaroIBC">
-              <Icon title="github" />
-              LinkedIn
-            </a>
-          </STNav>
-        </div>
-        <div>
-          <STHeader>...or also contact me via e-mail:</STHeader>
-          <STPgph>
-            <a href="mailto:correo@gmail.com">correo@gmail.com</a>
-          </STPgph>
-        </div>
-      </STFlexCont>
+
+      <STContactList>
+        {contactList.map(item => (
+          <ContactItem {...item} />
+        ))}
+      </STContactList>
     </section>
   );
 }

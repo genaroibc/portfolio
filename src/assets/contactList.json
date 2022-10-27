@@ -1,0 +1,17 @@
+[
+  {
+    "imageSrc": "/svg/mail.svg",
+    "href": "mailto:bonavitaismael@gmail.com",
+    "title": "E-MAIL"
+  },
+  {
+    "imageSrc": "/svg/linkedin.svg",
+    "href": "https://www.linkedin.com/in/genaro-ismael-bonavita-170742231/",
+    "title": "LINKEDIN"
+  },
+  {
+    "imageSrc": "/svg/github.svg",
+    "href": "https://github.com/GenaroIBC",
+    "title": "GITHUB"
+  }
+]
