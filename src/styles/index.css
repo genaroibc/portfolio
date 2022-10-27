@@ -21,7 +21,7 @@
 
   --dark-color: #232323;
 
-  font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -111,6 +111,10 @@ section {
   padding: 1rem;
 }
 
+section#hero {
+  margin-top: 0;
+}
+
 p {
   line-height: 1.8;
   font-size: 1.5rem;
@@ -125,5 +129,9 @@ ul {
 @media screen and (min-width: 765px) {
   :root {
     font-size: 16px;
+  }
+
+  section {
+    margin: 0 auto;
   }
 }
