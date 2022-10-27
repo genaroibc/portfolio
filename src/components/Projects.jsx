@@ -46,7 +46,7 @@ const STSlide = styled(STFlexCont)`
     display: block;
   }
 
-  @media screen and (min-width: 765px) {
+  @media screen and (min-width: 768px) {
     min-height: 550px;
 
     &.${SLIDER_CLASS} {
@@ -63,7 +63,7 @@ const STIconsCont = styled.div`
   margin: auto;
   gap: 1rem;
 
-  @media screen and (min-width: 765px) {
+  @media screen and (min-width: 768px) {
     margin: unset;
     align-self: flex-end;
   }

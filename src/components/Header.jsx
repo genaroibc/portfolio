@@ -19,7 +19,7 @@ const STHeader = styled.header`
 
   background-color: var(--secondary-color);
 
-  @media screen and (min-width: 765px) {
+  @media screen and (min-width: 768px) {
     min-height: 80px;
 
     nav.menu-visible {

@@ -16,6 +16,8 @@ const STIconListItem = styled.li`
   align-items: center;
   gap: 1rem;
 
+  font-size: 1.3rem;
+
   padding: 1rem;
   margin: 0.3rem;
 
@@ -72,7 +74,7 @@ export default function Stack() {
       <STSubTitle>Stack of technologies:</STSubTitle>
 
       <Accordion
-        style={{ backgroundColor: "steelblue", color: "#fff" }}
+        style={{ backgroundColor: "var(--terciary-color)", color: "#fff" }}
         multiple={true}
         data={HARD_SKILLS_DATA}
       />
