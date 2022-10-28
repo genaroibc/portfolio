@@ -12,7 +12,7 @@ const STPgph = styled.p`
 
 export default function About() {
   return (
-    <section id="about">
+    <section className="animated-section" id="about">
       <STSectionTitle>About me</STSectionTitle>
       <STFlexCont>
         <STPicture>

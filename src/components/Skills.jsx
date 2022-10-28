@@ -69,7 +69,7 @@ const HARD_SKILLS_DATA = [
 
 export default function Stack() {
   return (
-    <section id="skills">
+    <section className="animated-section" id="skills">
       <STSectionTitle>Skills</STSectionTitle>
       <STSubTitle>Stack of technologies:</STSubTitle>
 

@@ -40,7 +40,7 @@ const ContactItem = ({ imageSrc, title, href }) => (
 
 export default function Contact() {
   return (
-    <section id="contact">
+    <section className="animated-section" id="contact">
       <STSectionTitle>Contact Me</STSectionTitle>
       <STSubTitle fontSize="1.8rem">Let's build something amazing!</STSubTitle>
 

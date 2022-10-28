@@ -12,6 +12,7 @@ import { v4 as uuid } from "uuid";
 
 import styled from "styled-components";
 import projectsConfig from "../assets/projectsConfig.json";
+import { memo } from "react";
 
 const SLIDER_CLASS = "slider-visible";
 
@@ -105,12 +106,13 @@ const STSlidePicture = styled(STPicture)`
   }
 `;
 
-export default function Projects() {
-  useEffect(() => {
-    document
-      .getElementById(projectsConfig[0].id)
-      .classList.add(`${SLIDER_CLASS}`);
-  }, []);
+function Projects() {
+  // useEffect(() => {
+  //   document
+  //     .getElementById(projectsConfig[0].id)
+  //     .classList.add(`${SLIDER_CLASS}`);
+  // }, []);
+
   const toggleSlideVisibility = id => {
     document
       .querySelectorAll(`.${SLIDER_CLASS}`)
@@ -119,22 +121,30 @@ export default function Projects() {
     document.getElementById(id).classList.add(`${SLIDER_CLASS}`);
   };
 
+  console.log({ projectsConfig });
   return (
-    <section id="projects">
+    <section className="animated-section" id="projects">
       <STSectionTitle>My projects</STSectionTitle>
       <STSubTitle>Some projects i've worked in:</STSubTitle>
       <div style={{ position: "relative" }}>
         {projectsConfig.map(
-          ({
-            description,
-            id,
-            imgUrl,
-            projectUrl = "#",
-            repoUrl = "#",
-            technologies = [],
-            title,
-          }) => (
-            <STSlide key={uuid()} id={id}>
+          (
+            {
+              description,
+              id,
+              imgUrl,
+              projectUrl = "#",
+              repoUrl = "#",
+              technologies = [],
+              title,
+            },
+            index
+          ) => (
+            <STSlide
+              key={uuid()}
+              className={index === 0 ? SLIDER_CLASS : ""}
+              id={id}
+            >
               <STSlidePicture>
                 <div>
                   <a target="_blank" href={repoUrl}>
@@ -178,3 +188,5 @@ export default function Projects() {
     </section>
   );
 }
+
+export default memo(Projects);

@@ -11,8 +11,6 @@ export function useObserver(config = {}) {
     }, config)
   );
 
-  console.log(observer);
-
   useEffect(() => {
     const { current: currentObserver } = observer;
     currentObserver.disconnect();
