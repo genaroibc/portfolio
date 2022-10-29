@@ -21,7 +21,7 @@ const STContactList = styled.ul`
   flex-direction: column;
   align-items: center;
 
-  background-color: steelblue;
+  background-color: var(--terciary-color);
   padding: 1rem;
 
   @media screen and (min-width: 576px) {

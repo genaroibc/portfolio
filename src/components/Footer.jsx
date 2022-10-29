@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Icon } from "./shared/Icon";
 
 const STFooter = styled.footer`
   background-color: var(--secondary-color);
@@ -9,13 +8,10 @@ const STFooter = styled.footer`
 
 const STLink = styled.a`
   font-size: 1.5rem;
+
   width: fit-content;
   margin: auto;
   gap: 1rem;
-
-  svg {
-    width: 1.5rem;
-  }
 `;
 
 export default function Footer() {
@@ -29,7 +25,8 @@ export default function Footer() {
         in 2022
       </p>
       <STLink href="https://github.com/GenaroIBC/portfolio" target="_blank">
-        View repository <Icon title="github" />
+        View repository{" "}
+        <img width="30" src="/svg/github.svg" alt="github icon" />
       </STLink>
     </STFooter>
   );

@@ -5,6 +5,7 @@ import {
   STPicture,
   STSubTitle,
 } from "./shared/STComponents";
+
 import { Icon } from "./shared/Icon";
 
 import { useEffect } from "react";
@@ -86,6 +87,8 @@ const STSlidePicture = styled(STPicture)`
   div {
     position: absolute;
 
+    text-align: center;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -99,6 +102,15 @@ const STSlidePicture = styled(STPicture)`
     opacity: 0.6;
 
     background-color: #000;
+
+    a {
+      width: 15%;
+
+      img {
+        width: 100%;
+        max-width: 60px;
+      }
+    }
   }
 
   &:hover div {
@@ -148,13 +160,13 @@ function Projects() {
               <STSlidePicture>
                 <div>
                   <a target="_blank" href={repoUrl}>
-                    <Icon title="sourcecode" />
+                    <img src="/svg/sourcecode.svg" />
                   </a>
                   <a target="_blank" href={projectUrl}>
-                    <Icon title="newtab" />
+                    <img src="/svg/newtab.svg" />
                   </a>
                 </div>
-                <STImg src={imgUrl} alt="img alternative" />
+                <STImg src={imgUrl} alt="project preview" />
               </STSlidePicture>
 
               <STFlexCont flexDir="column">
