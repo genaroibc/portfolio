@@ -12,7 +12,7 @@ export const STSectionTitle = styled.h2`
   overflow: hidden;
   text-align: center;
 
-  margin: 1rem;
+  margin: 8rem 0 1rem;
 
   font-size: 3rem;
   line-height: normal;

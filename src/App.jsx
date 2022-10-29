@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function App() {
   const { entries, setElements } = useObserver({
-    rootMargin: "-120px",
+    rootMargin: "-160px",
   });
 
   useEffect(() => {

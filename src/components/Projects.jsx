@@ -133,7 +133,6 @@ function Projects() {
     document.getElementById(id).classList.add(`${SLIDER_CLASS}`);
   };
 
-  console.log({ projectsConfig });
   return (
     <section className="animated-section" id="projects">
       <STSectionTitle>My projects</STSectionTitle>
