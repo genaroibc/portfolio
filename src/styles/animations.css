@@ -17,20 +17,10 @@
 } */
 
 .animated-section {
-  --translate-x: 20px;
-
-  transition: 0.8s transform ease-out, 0.8s opacity ease;
+  transition: 0.8s opacity ease;
   opacity: 0.5;
-  transform: translateX(var(--translate-x));
 }
 
 .animated-section.section-visible {
   opacity: 1;
-  transform: translateY(0);
-}
-
-@media screen and (min-width: 1200px) {
-  .animated-section {
-    --translate-x: 50px;
-  }
 }
