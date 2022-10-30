@@ -9,6 +9,21 @@ const STHeader = styled.header`
   left: 0;
   right: 0;
 
+  span.logo {
+    margin: auto;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bold;
+
+    &::after,
+    &::before {
+      content: "•";
+    }
+
+    &::after {
+    }
+  }
+
   width: 100%;
   min-height: 50px;
   padding: 0 2rem;
@@ -130,7 +145,13 @@ const closeMenu = () => {
 export default function Header() {
   return (
     <STHeader>
-      <img src="/vite.svg" alt="vite logotype" />
+      {/* <img
+        width="200"
+        height="200"
+        src="/svg/genaro-bonavita-logo.svg"
+        alt="genaro bonavita logotype"
+      /> */}
+      <span className="logo">Genaro Bonavita</span>
       <STNav id="hamburger-menu">
         {linksConfig.map(({ href, title }) => (
           <a key={uuid()} onClick={closeMenu} href={href}>

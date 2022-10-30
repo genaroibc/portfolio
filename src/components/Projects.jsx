@@ -3,7 +3,7 @@ import {
   STImg,
   STFlexCont,
   STPicture,
-  STSubTitle,
+  STSubTitle
 } from "./shared/STComponents";
 
 import { Accordion } from "./shared/Accordion";
@@ -49,7 +49,7 @@ const STSlide = styled(STFlexCont)`
   }
 
   @media screen and (min-width: 768px) {
-    min-height: 550px;
+    min-height: 600px;
 
     &.${SLIDER_CLASS} {
       display: flex;
@@ -104,7 +104,7 @@ const STSlidePicture = styled(STPicture)`
     background-color: #000;
 
     a {
-      width: 15%;
+      width: 18%;
 
       img {
         width: 100%;
@@ -141,7 +141,7 @@ function Projects() {
               projectUrl = "#",
               repoUrl = "#",
               technologies = [],
-              title,
+              title
             },
             index
           ) => (
@@ -179,8 +179,8 @@ function Projects() {
                       // description: (
                       //   <p style={{ fontSize: "1.7rem" }}>{description}</p>
                       // ),
-                      description,
-                    },
+                      description
+                    }
                   ]}
                 />
 
