@@ -1,5 +1,5 @@
 import { Icon } from "./shared/Icon";
-import { STFlexCont, STSectionTitle, STSubTitle } from "./shared/STComponents";
+import { STSectionTitle, STSubTitle } from "./shared/STComponents";
 import {
   interestedIn,
   learned,
@@ -9,6 +9,7 @@ import { v4 as uuid } from "uuid";
 import styled from "styled-components";
 import { Accordion } from "./shared/Accordion";
 import SOFT_SKILLS_DATA from "../assets/softSkills.json";
+import { memo } from "react";
 
 const STIconListItem = styled.li`
   display: inline-flex;
@@ -67,7 +68,7 @@ const HARD_SKILLS_DATA = [
   },
 ];
 
-export default function Stack() {
+function Stack() {
   return (
     <section className="animated-section" id="skills">
       <STSectionTitle>Skills</STSectionTitle>
@@ -79,9 +80,11 @@ export default function Stack() {
         data={HARD_SKILLS_DATA}
       />
 
-      <STSubTitle>Soft Skills:</STSubTitle>
+      <STSubTitle margin="5rem auto 3rem">Soft Skills:</STSubTitle>
 
       <Accordion data={SOFT_SKILLS_DATA} />
     </section>
   );
 }
+
+export default memo(Stack);

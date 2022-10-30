@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { v4 as uuid } from "uuid";
 
-const RADIO_INPUTS_NAME = uuid();
-
 const STWrapper = styled.div`
   input {
     position: absolute;
@@ -50,6 +48,7 @@ const STWrapper = styled.div`
     color: #2c3e50;
     background: white;
     transition: all 0.35s;
+    line-height: 1.7;
   }
 
   .tab-close {
@@ -87,27 +86,34 @@ const STLabel = styled.label`
   }
 `;
 
-const AccordionTab = ({ title, description, id, multiple, style }) => {
+const AccordionTab = ({
+  title,
+  description,
+  id,
+  multiple,
+  style,
+  radioInputName,
+}) => {
   return (
-    <>
-      <div className="tab">
-        <input
-          type={multiple ? "checkbox" : "radio"}
-          id={id}
-          name={multiple ? "" : RADIO_INPUTS_NAME}
-        />
-        <STLabel className="tab-label" htmlFor={id}>
-          {title}
-        </STLabel>
-        <div style={style} className="tab-content">
-          {description}
-        </div>
+    <div className="tab">
+      <input
+        type={multiple ? "checkbox" : "radio"}
+        id={id}
+        name={multiple ? "" : radioInputName}
+      />
+      <STLabel className="tab-label" htmlFor={id}>
+        {title}
+      </STLabel>
+      <div style={style} className="tab-content">
+        {description}
       </div>
-    </>
+    </div>
   );
 };
 
 export function Accordion({ multiple = false, data = [], style = {} }) {
+  const radioInputName = uuid();
+
   return (
     <STWrapper>
       <div className="tabs">
@@ -118,6 +124,7 @@ export function Accordion({ multiple = false, data = [], style = {} }) {
             multiple={multiple}
             key={uuid()}
             style={style}
+            radioInputName={radioInputName}
           />
         ))}
       </div>

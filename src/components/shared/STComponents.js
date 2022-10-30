@@ -16,7 +16,7 @@ export const STSectionTitle = styled.h2`
 
   font-size: 3rem;
   line-height: normal;
-  font-weight: 400;
+  font-weight: 500;
 
   &:before,
   &:after {
@@ -58,12 +58,13 @@ export const STImg = styled.img`
 export const STFlexCont = styled.div`
   width: 100%;
 
-  margin: 1rem auto 0;
+  margin: ${({ margin }) => margin ?? "1rem auto 0"};
   padding: ${({ padding }) => padding ?? "1rem"};
 
   display: flex;
   justify-content: space-evenly;
   flex-direction: ${({ smFlexDir }) => smFlexDir ?? "column"};
+  gap: ${({ gap }) => gap ?? "unset"};
 
   border-radius: 5px;
   background-color: ${({ bgCol }) => bgCol ?? "var(--terciary-color)"};
@@ -79,10 +80,12 @@ export const STFlexCont = styled.div`
 
 export const STSubTitle = styled.h3`
   padding: ${({ padding }) => padding ?? "initial"};
-  margin: ${({ margin }) => margin ?? "1.5rem auto 2.5rem"};
+  margin: ${({ margin }) => margin ?? "3rem auto"};
 
   font-size: ${({ fontSize }) => fontSize ?? "2rem"};
   text-align: ${({ textAlign }) => textAlign ?? "center"};
 
-  font-weight: ${({ fontWeight }) => fontWeight ?? "400"};
+  font-weight: ${({ fontWeight }) => fontWeight ?? "500"};
+
+  line-height: normal;
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { STSectionTitle, STSubTitle } from "./shared/STComponents";
 import contactList from "../assets/contactList.json";
+import { v4 as uuid } from "uuid";
 
 const STContactItem = styled.li`
   img {
@@ -42,11 +43,11 @@ export default function Contact() {
   return (
     <section className="animated-section" id="contact">
       <STSectionTitle>Contact Me</STSectionTitle>
-      <STSubTitle fontSize="1.8rem">Let's build something amazing!</STSubTitle>
+      <STSubTitle>Let's build something amazing!</STSubTitle>
 
       <STContactList>
         {contactList.map(item => (
-          <ContactItem {...item} />
+          <ContactItem key={uuid()} {...item} />
         ))}
       </STContactList>
     </section>

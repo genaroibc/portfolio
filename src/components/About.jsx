@@ -8,6 +8,14 @@ import {
 
 const STPgph = styled.p`
   font-size: 1.8rem;
+
+  .text-bold {
+    font-weight: bold;
+  }
+
+  .text-italic {
+    font-style: italic;
+  }
 `;
 
 export default function About() {
@@ -23,11 +31,22 @@ export default function About() {
           />
         </STPicture>
 
-        <STFlexCont flexDir="column" padding="0">
+        <STFlexCont
+          jusCont="center"
+          alItems="center"
+          flexDir="column"
+          padding="0"
+          margin="0"
+        >
           <STPgph>
-            I am Genaro Bonavita, Frontend Developer, mainly focused on the
-            React ecosystem. I love building applications and products through
-            clean and maintainable code.
+            I am <span className="text-bold">Genaro Bonavita</span>,{" "}
+            <span className="text-bold">Frontend Developer</span>, mainly
+            focused on the <span className="text-italic">React</span> ecosystem.
+            I love building applications and products through
+            <span className="text-bold"> clean </span>
+            and
+            <span className="text-bold"> maintainable </span>
+            code.
           </STPgph>
         </STFlexCont>
       </STFlexCont>

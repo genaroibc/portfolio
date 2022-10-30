@@ -6,9 +6,9 @@ import {
   STSubTitle,
 } from "./shared/STComponents";
 
+import { Accordion } from "./shared/Accordion";
 import { Icon } from "./shared/Icon";
 
-import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 
 import styled from "styled-components";
@@ -62,7 +62,7 @@ const STIconsCont = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   max-width: 400px;
-  margin: auto;
+  margin: 2rem auto;
   gap: 1rem;
 
   @media screen and (min-width: 768px) {
@@ -119,12 +119,6 @@ const STSlidePicture = styled(STPicture)`
 `;
 
 function Projects() {
-  // useEffect(() => {
-  //   document
-  //     .getElementById(projectsConfig[0].id)
-  //     .classList.add(`${SLIDER_CLASS}`);
-  // }, []);
-
   const toggleSlideVisibility = id => {
     document
       .querySelectorAll(`.${SLIDER_CLASS}`)
@@ -168,11 +162,28 @@ function Projects() {
                 <STImg src={imgUrl} alt="project preview" />
               </STSlidePicture>
 
-              <STFlexCont flexDir="column">
-                <STSubTitle fontWeight={600} margin="1rem" fonSize="2.5rem">
+              <STFlexCont gap="3rem" flexDir="column">
+                <STSubTitle
+                  fontWeight={500}
+                  margin="1rem auto"
+                  fontSize="2.5rem"
+                >
                   {title}
                 </STSubTitle>
-                <p>{description}</p>
+
+                <Accordion
+                  multiple={true}
+                  data={[
+                    {
+                      title: "Description",
+                      // description: (
+                      //   <p style={{ fontSize: "1.7rem" }}>{description}</p>
+                      // ),
+                      description,
+                    },
+                  ]}
+                />
+
                 <STIconsCont smFlexDir="row">
                   {technologies.map(item => (
                     <STIcon key={uuid()}>
