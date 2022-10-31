@@ -64,11 +64,39 @@ const STHeading = styled.h1`
   }
 `;
 
+const STDownloadCVArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    padding: 1rem 3rem;
+    margin: 5rem auto;
+
+    background-color: var(--terciary-color);
+    border-radius: 10px;
+
+    transition: background-color 0.3s ease-out;
+
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: var(--complement-color);
+    }
+  }
+`;
+
 export default function Hero() {
   return (
     <section id="hero">
       <STHeading>Genaro Bonavita</STHeading>
       <STSubHeading>Frontend-Developer</STSubHeading>
+
+      <STDownloadCVArea>
+        <a href="/CV.pdf" target="_blank" download="Genaro Bonavita CV">
+          Download CV
+        </a>
+      </STDownloadCVArea>
     </section>
   );
 }

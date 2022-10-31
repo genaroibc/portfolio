@@ -80,6 +80,7 @@ const STWrapper = styled.div`
 
 const STLabel = styled.label`
   color: #bbb;
+  transition: 0.3s color ease-out;
 
   &:hover {
     color: #fff;
@@ -92,7 +93,7 @@ const AccordionTab = ({
   id,
   multiple,
   style,
-  radioInputName,
+  radioInputName
 }) => {
   return (
     <div className="tab">
