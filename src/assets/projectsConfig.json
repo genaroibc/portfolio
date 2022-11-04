@@ -9,12 +9,21 @@
     "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
   },
   {
-    "id": "proj-3",
+    "id": "proj-2",
     "title": "Full-Stack ToDo app",
     "technologies": ["next", "react", "css", "mongodb"],
     "imgUrl": "/img/fullstack-todo.webp",
-    "description": "The typical ToDo application, but integrating client and server sides, with MongoDB Atlas as DB Cloud and the usual features: create, read, update and delete. Oh, and also responsive.",
+    "description": "The typical ToDo application, but integrating client and server sides, with MongoDB Atlas as DB Cloud and the usual features: create, read, update and delete.",
     "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
     "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
+  },
+  {
+    "id": "proj-3",
+    "title": "Connect Four",
+    "technologies": ["react", "typescript", "css"],
+    "imgUrl": "/img/connect-four.webp",
+    "description": "My version of the Connect Four game, implementing OOP with TypeScript and separating logic from view.",
+    "repoUrl": "https://github.com/GenaroIBC/connect-four",
+    "projectUrl": "https://connect-four-mauve.vercel.app/"
   }
 ]
