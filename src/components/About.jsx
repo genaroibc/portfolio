@@ -6,7 +6,7 @@ const STAboutSection = styled.article`
   background-color: var(--terciary-color);
   padding: 1rem;
 
-  img {
+  img.profile-photo {
     margin: 1.5rem auto;
     display: block;
     float: none;
@@ -14,6 +14,16 @@ const STAboutSection = styled.article`
     max-width: 400px;
     border-radius: 30px;
     box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  }
+  a {
+    font-weight: bold;
+  }
+
+  img.new-tab-icon {
+    width: 20px;
+    margin: 0 5px;
+    bottom: 0;
+    transform: translateY(5px);
   }
 
   .text-bold {
@@ -25,10 +35,28 @@ const STAboutSection = styled.article`
   }
 
   @media screen and (min-width: 768px) {
-    img {
+    img.profile-photo {
       float: left;
       width: 300px;
       margin: 1.5rem;
+    }
+
+    a {
+      position: relative;
+
+      img.new-tab-icon {
+        transition: transform 0.6s;
+        position: relative;
+        transform: rotateZ(-35deg) translateY(5px);
+        width: 30px;
+      }
+
+      &:hover {
+        img.new-tab-icon {
+          opacity: 1;
+          transform: rotateZ(0deg) translateY(5px);
+        }
+      }
     }
   }
 `;
@@ -38,7 +66,11 @@ export default function About() {
     <section className="animated-section" id="about">
       <STSectionTitle>About me</STSectionTitle>
       <STAboutSection>
-        <img src="/img/genaro-bonavita.webp" alt="my profile photo" />
+        <img
+          className="profile-photo"
+          src="/img/genaro-bonavita.webp"
+          alt="my profile photo"
+        />
         <p>
           I am <span className="text-bold">Genaro Bonavita</span>,{" "}
           <span className="text-bold">Frontend Developer</span>, mainly focused
@@ -50,18 +82,17 @@ export default function About() {
           code.
         </p>
         <p>
-          Currently, I work part-time at GoCode, where we are developing web
-          sites for NGOs and foundations that help other people and don't have
-          web presence. We are a team of students looking for their first tech
-          job, and seeing that work experience is required in most jobs, we are
-          building it, by working in team in real-life cases, and helping others
-          along the way.
-        </p>
-        <p>
-          Working as a team using SCRUM methodology, we acquire skills such as
-          effective communication, team-coordination, meeting deadlines and
-          customer services. Also, I'm continuously developing personal
-          projects.
+          Currently, I work part-time at{" "}
+          <a href="https://www.gocode.ar/" target="_blank">
+            GoCode
+            <img
+              className="new-tab-icon"
+              src="/svg/newtab.svg"
+              alt="new tab icon"
+            />
+          </a>
+          , where we are developing web sites for NGOs and foundations that help
+          other people and don't have web presence.
         </p>
       </STAboutSection>
     </section>
