@@ -85,6 +85,39 @@ const STNav = styled.nav`
 
   font-size: 1.5rem;
 
+  a {
+    color: #ddd;
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      transition: width 0.3s;
+      width: 0;
+      height: 4px;
+      bottom: -5px;
+      background-color: #fff;
+    }
+
+    &::after {
+      right: 50%;
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after,
+      &::before {
+        width: 50%;
+      }
+    }
+  }
+
   &.menu-visible {
     clip-path: circle(100% at 50% 50%);
     top: 0;
@@ -145,12 +178,6 @@ const closeMenu = () => {
 export default function Header() {
   return (
     <STHeader>
-      {/* <img
-        width="200"
-        height="200"
-        src="/svg/genaro-bonavita-logo.svg"
-        alt="genaro bonavita logotype"
-      /> */}
       <span className="logo">Genaro Bonavita</span>
       <STNav id="hamburger-menu">
         {linksConfig.map(({ href, title }) => (
