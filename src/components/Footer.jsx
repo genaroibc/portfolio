@@ -4,6 +4,7 @@ const STFooter = styled.footer`
   background-color: var(--secondary-color);
   padding: 1rem 2rem 2rem;
   font-size: 1.5rem;
+  border-top: 10px solid var(--complement-color);
 `;
 
 const STLink = styled.a`
@@ -18,7 +19,7 @@ export default function Footer() {
   return (
     <STFooter>
       <p>
-        Made by{" "}
+        Developed by{" "}
         <a href="https://github.com/GenaroIBC" target="_blank">
           Genaro Bonavita
         </a>{" "}
