@@ -23,9 +23,10 @@ const StNav = styled.nav`
 
   margin: auto;
   margin-top: 1rem;
+  gap: 0.6rem;
 
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
 
   position: sticky;
   bottom: 2vh;
