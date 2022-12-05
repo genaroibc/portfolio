@@ -50,8 +50,6 @@ const STSlide = styled(STFlexCont)`
   }
 
   @media screen and (min-width: 768px) {
-    min-height: 600px;
-
     &.${SLIDER_CLASS} {
       display: flex;
     }
