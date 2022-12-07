@@ -83,6 +83,8 @@ const STSlidePicture = styled(STPicture)`
   position: relative;
   overflow: hidden;
 
+  max-width: 100%;
+
   div {
     position: absolute;
 
@@ -161,10 +163,10 @@ function Projects() {
                 <STImg src={imgUrl} alt="project preview" />
               </STSlidePicture>
 
-              <STFlexCont gap="3rem" flexDir="column">
+              <STFlexCont gap="1rem" flexDir="column" margin={0}>
                 <STSubTitle
                   fontWeight={500}
-                  margin="1rem auto"
+                  margin="0.5rem auto"
                   fontSize="2.5rem"
                 >
                   {title}
@@ -175,9 +177,6 @@ function Projects() {
                   data={[
                     {
                       title: "Description",
-                      // description: (
-                      //   <p style={{ fontSize: "1.7rem" }}>{description}</p>
-                      // ),
                       description
                     }
                   ]}
