@@ -15,7 +15,7 @@ const STWrapper = styled.div`
   }
 
   .tab {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 100%;
     color: white;
     overflow: hidden;
@@ -24,7 +24,7 @@ const STWrapper = styled.div`
   .tab-label {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0.7em;
     background: #2c3e50;
     font-weight: bold;
     cursor: pointer;
