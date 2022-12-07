@@ -19,12 +19,13 @@ const SLIDER_CLASS = "slider-visible";
 
 const StNav = styled.nav`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 
   margin: auto;
   margin-top: 1rem;
   gap: 0.6rem;
 
+  flex-wrap: wrap;
   width: 100%;
   max-width: 500px;
 
@@ -36,9 +37,8 @@ const StNav = styled.nav`
   border-radius: 10px;
 
   button {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
-    border-radius: 50%;
   }
 `;
 
