@@ -11,10 +11,12 @@ const STAboutSection = styled.article`
     display: block;
     float: none;
     width: 100%;
-    max-width: 400px;
-    border-radius: 30px;
+    max-width: 350px;
+    border-radius: 50%;
+    image-rendering: pixelated;
     box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
   }
+
   a {
     font-weight: bold;
   }
@@ -69,7 +71,7 @@ export default function About() {
         <img
           className="profile-photo"
           src="/img/genaro-bonavita.webp"
-          alt="my profile photo"
+          alt="genaro bonavita profile photo"
         />
         <p>
           I am <span className="text-bold">Genaro Bonavita</span>,{" "}
