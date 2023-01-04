@@ -89,7 +89,7 @@ const STLabel = styled.label`
 
 const AccordionTab = ({
   title,
-  description,
+  content,
   id,
   multiple,
   style,
@@ -106,7 +106,7 @@ const AccordionTab = ({
         {title}
       </STLabel>
       <div style={style} className="tab-content">
-        {description}
+        {content}
       </div>
     </div>
   );
