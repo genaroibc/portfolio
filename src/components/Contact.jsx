@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { STSectionTitle, STSubTitle } from "./shared/STComponents";
 import contactList from "../assets/contactList.json";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 
 const STContactItem = styled.li`
   img {
@@ -40,10 +41,12 @@ const ContactItem = ({ imageSrc, title, href }) => (
 );
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section className="animated-section" id="contact">
-      <STSectionTitle>Contact Me</STSectionTitle>
-      <STSubTitle>Let's build something amazing!</STSubTitle>
+      <STSectionTitle>{t("CONTACT_SECT.TITLE")}</STSectionTitle>
+      <STSubTitle>{t("CONTACT_SECT.SUBTITLE")}</STSubTitle>
 
       <STContactList>
         {contactList.map(item => (

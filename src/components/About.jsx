@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { STSectionTitle } from "./shared/STComponents";
+import { useTranslation } from "react-i18next";
 
 const STAboutSection = styled.article`
   text-align: left;
@@ -32,10 +33,6 @@ const STAboutSection = styled.article`
     font-weight: bold;
   }
 
-  .text-italic {
-    font-style: italic;
-  }
-
   @media screen and (min-width: 768px) {
     img.profile-photo {
       float: left;
@@ -64,9 +61,11 @@ const STAboutSection = styled.article`
 `;
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section className="animated-section" id="about">
-      <STSectionTitle>About me</STSectionTitle>
+      <STSectionTitle>{t("ABOUT_SECT.TITLE")}</STSectionTitle>
       <STAboutSection>
         <img
           className="profile-photo"
@@ -74,27 +73,22 @@ export default function About() {
           alt="genaro bonavita profile photo"
         />
         <p>
-          I am <span className="text-bold">Genaro Bonavita</span>,{" "}
-          <span className="text-bold">Frontend Developer</span>, mainly focused
-          on the <span className="text-italic">React</span> ecosystem. I love
-          building applications and products through
-          <span className="text-bold"> clean </span>
-          and
-          <span className="text-bold"> maintainable </span>
-          code.
+          {t("ABOUT_SECT.PGPH_1")}{" "}
+          <span className="text-bold">Genaro Bonavita</span>,{" "}
+          <span className="text-bold">Frontend Developer</span>,{" "}
+          {t("ABOUT_SECT.PGPH_2")}
         </p>
         <p>
-          Currently, I work part-time at{" "}
+          {t("ABOUT_SECT.PGPH_3")}{" "}
           <a href="https://www.gocode.ar/" target="_blank">
-            GoCode
+            {t("ABOUT_SECT.PGPH_4")}
             <img
               className="new-tab-icon"
               src="/svg/newtab.svg"
               alt="new tab icon"
             />
           </a>
-          , where we are developing web sites for NGOs and foundations that help
-          other people and don't have web presence.
+          {t("ABOUT_SECT.PGPH_5")}
         </p>
       </STAboutSection>
     </section>

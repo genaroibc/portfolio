@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const STFooter = styled.footer`
   background-color: var(--secondary-color);
@@ -16,17 +17,19 @@ const STLink = styled.a`
 `;
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <STFooter>
       <p>
-        Developed by{" "}
+        {t("FOOTER_SECT.PGPH_1")}{" "}
         <a href="https://github.com/GenaroIBC" target="_blank">
           Genaro Bonavita
         </a>{" "}
-        in 2022
+        {t("FOOTER_SECT.PGPH_2")}
       </p>
       <STLink href="https://github.com/GenaroIBC/portfolio" target="_blank">
-        View repository{" "}
+        {t("FOOTER_SECT.PGPH_3")}{" "}
         <img width="30" src="/svg/github.svg" alt="github icon" />
       </STLink>
     </STFooter>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const COMMON_STYLES = `
   box-sizing: content-box;
@@ -87,14 +88,16 @@ const STDownloadCVArea = styled.div`
 `;
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section id="hero">
       <STHeading>Genaro Bonavita</STHeading>
-      <STSubHeading>Frontend-Developer</STSubHeading>
+      <STSubHeading>{t("HERO_SECT.SUBTITLE")}</STSubHeading>
 
       <STDownloadCVArea>
         <a href="/CV.pdf" target="_blank" download="Genaro Bonavita CV">
-          Download CV
+          {t("HERO_SECT.DOWNLOAD_DV")}
         </a>
       </STDownloadCVArea>
     </section>
