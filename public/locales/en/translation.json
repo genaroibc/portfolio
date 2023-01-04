@@ -1,0 +1,140 @@
+{
+  "HEADER_SECT": {
+    "LINKS_LIST": {
+      "HOME": "HOME",
+      "ABOUT": "ABOUT",
+      "PROJECTS": "PROJECTS",
+      "SKILLS": "SKILLS",
+      "CONTACT": "CONTACT"
+    }
+  },
+  "HERO_SECT": {
+    "SUBTITLE": "Frontend-Developer",
+    "DOWNLOAD_DV": "Download CV"
+  },
+  "ABOUT_SECT": {
+    "TITLE": "About me",
+    "PGPH_1": "I am",
+    "PGPH_2": "mainly focused on the React ecosystem. I love building applications and products through clean and maintainable code.",
+    "PGPH_3": "Currently, I work part-time at",
+    "PGPH_4": "GoCode",
+    "PGPH_5": ", where we are developing web sites for NGOs and foundations that help other people and don't have web presence."
+  },
+  "PROJECTS_SECT": {
+    "PROJECTS_LIST": [
+      {
+        "id": "proj-1",
+        "title": "IKodi",
+        "technologies": ["next", "react", "css"],
+        "imgUrl": "/img/ikodi.webp",
+        "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development.",
+        "repoUrl": "https://github.com/GenaroIBC/ikodi",
+        "projectUrl": "https://ikodi.vercel.app/"
+      },
+      {
+        "id": "proj-2",
+        "title": "Full-Stack ToDo app",
+        "technologies": ["next", "react", "css", "mongodb"],
+        "imgUrl": "/img/fullstack-todo.webp",
+        "description": "The typical ToDo application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
+        "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
+        "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
+      },
+      {
+        "id": "proj-3",
+        "title": "Minecraft Clone",
+        "technologies": ["typescript", "react", "css"],
+        "imgUrl": "/img/mineclone.webp",
+        "description": "A Minecraft clone based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
+        "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
+        "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
+      },
+      {
+        "id": "proj-4",
+        "title": "Tic-Tac-Toe",
+        "technologies": ["js", "css", "html"],
+        "imgUrl": "/img/tictactoe.webp",
+        "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
+        "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
+        "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
+      },
+      {
+        "id": "proj-5",
+        "title": "Connect Four",
+        "technologies": ["react", "typescript", "css"],
+        "imgUrl": "/img/connect-four.webp",
+        "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
+        "repoUrl": "https://github.com/GenaroIBC/connect-four",
+        "projectUrl": "https://connect-four-mauve.vercel.app/"
+      },
+      {
+        "id": "proj-6",
+        "title": "Crypto Assets",
+        "technologies": ["react", "next", "css"],
+        "imgUrl": "/img/crypto-assets.webp",
+        "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
+        "repoUrl": "https://github.com/CollaborativeTeam/challenge",
+        "projectUrl": "https://challenge-cyan.vercel.app/"
+      }
+    ],
+    "TITLE": "My projects",
+    "SUBTITLE": "Some projects i've worked in:",
+    "ACCORDION_TITLE": "Description"
+  },
+  "SKILLS_SECT": {
+    "SOFT_SKILLS_LIST": [
+      {
+        "title": "📈 Growth mindset",
+        "content": "I am always looking to innovate and grow as a person and professional."
+      },
+      {
+        "title": "🚀 Never stop learning",
+        "content": "I believe that learning is for life. I love learning from everyone about everything."
+      },
+      {
+        "title": "🚅 Quick adaptation to change",
+        "content": "Change is a good opportunity to see things in perspective and even change your approach."
+      },
+      {
+        "title": "🖌️ Curious and creative",
+        "content": "I like even break something to learn how does it work (don't worry, always in a separated branch 😉)."
+      }
+    ],
+    "HARD_SKILLS_LIST": [
+      {
+        "title": "🧠 I know",
+        "items": [
+          "html",
+          "css",
+          "js",
+          "react",
+          "node",
+          "git",
+          "next",
+          "bootstrap",
+          "mongodb"
+        ]
+      },
+      {
+        "title": "🌱  I'm learning",
+        "items": ["typescript"]
+      },
+      {
+        "title": "🔎 I'm interested in",
+        "items": ["python", "aws", "blockchain"]
+      }
+    ],
+    "TITLE": "Skills",
+    "SUBTITLE_1": "Stack of technologies:",
+    "SUBTITLE_2": "Soft Skills:"
+  },
+  "CONTACT_SECT": {
+    "TITLE": "Contact Me",
+    "SUBTITLE": "Let's build something amazing!"
+  },
+  "FOOTER_SECT": {
+    "PGPH_1": "Developed by",
+    "PGPH_2": "in 2022",
+    "PGPH_3": "View repository"
+  }
+}
