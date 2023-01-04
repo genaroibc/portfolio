@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { v4 as uuid } from "uuid";
-import linksConfig from "../assets/linksConfig.json";
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
+import headerLinks from "../assets/headerLinks";
 
 const STHeader = styled.header`
   position: fixed;
@@ -8,21 +10,6 @@ const STHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-
-  span.logo {
-    margin: auto;
-    font-size: 2rem;
-    white-space: nowrap;
-    font-weight: bold;
-
-    &::after,
-    &::before {
-      content: "•";
-    }
-
-    &::after {
-    }
-  }
 
   width: 100%;
   min-height: 50px;
@@ -41,7 +28,7 @@ const STHeader = styled.header`
       top: unset;
     }
 
-    button {
+    #hamburguer-menu-button {
       display: none;
     }
 
@@ -176,13 +163,17 @@ const closeMenu = () => {
 };
 
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <STHeader>
-      <span className="logo">Genaro Bonavita</span>
+      <button onClick={() => changeLanguage("en")}>EN</button>
+      <button onClick={() => changeLanguage("es")}>ES</button>
+
       <STNav id="hamburger-menu">
-        {linksConfig.map(({ href, title }) => (
+        {headerLinks.map(({ href, title }) => (
           <a key={uuid()} onClick={closeMenu} href={href}>
-            {title}
+            {t(`HEADER_SECT.LINKS_LIST.${title}`)}
           </a>
         ))}
       </STNav>
