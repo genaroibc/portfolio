@@ -7,10 +7,11 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import { useObserver } from "./hooks/useObserver";
 import { useEffect } from "react";
+import { Suspense } from "react";
 
 function App() {
   const { entries, setElements } = useObserver({
-    rootMargin: "-160px",
+    rootMargin: "-160px"
   });
 
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
   }, [entries]);
 
   return (
-    <>
+    <Suspense fallback="loading...">
       <Header />
       <Hero />
       <About />
@@ -33,7 +34,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
-    </>
+    </Suspense>
   );
 }
 
