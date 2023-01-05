@@ -10,7 +10,9 @@
 
 ## 💡 Credits
 
-The accordion used in this projects is highly based on [this CodePen](https://codepen.io/raubaca/pen/PZzpVe) created by @raubaca.
+The accordion used in this projects is highly based on [this CodePen](https://codepen.io/raubaca/pen/PZzpVe) created by [@raubaca](https://github.com/raubaca).
+
+The animated svg loader used in this project was made by [@SamHerbert](https://github.com/SamHerbert/). [Check his repo](https://github.com/SamHerbert/SVG-Loaders)
 
 ## 🔗 URL
 
