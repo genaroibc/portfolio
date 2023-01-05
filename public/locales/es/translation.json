@@ -21,120 +21,83 @@
     "PGPH_5": ", donde desarrollamos sitios web para ONGs y fundaciones que ayudan a otros y no tienen presencia en Internet."
   },
   "PROJECTS_SECT": {
-    "PROJECTS_LIST": [
-      {
-        "id": "proj-1",
-        "title": "IKodi",
-        "technologies": ["next", "react", "css"],
-        "imgUrl": "/img/ikodi.webp",
-        "description": "IKodi es mi blog personal, donde comparto mi conocimiento escribiendo artículos sobre diferentes herramientas, tecnologías y conceptos relacionados con el mundo del desarrollo web.",
-        "repoUrl": "https://github.com/GenaroIBC/ikodi",
-        "projectUrl": "https://ikodi.vercel.app/"
-      },
-      {
-        "id": "proj-2",
-        "title": "App de tareas Full-Stack",
-        "technologies": ["next", "react", "css", "mongodb"],
-        "imgUrl": "/img/fullstack-todo.webp",
-        "description": "La típica aplicación de tareas, pero abarcando tanto el lado del cliente como del servidor, con autenticación de usuarios y persistencia de los datos con MongoDB.",
-        "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
-        "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
-      },
-      {
-        "id": "proj-3",
-        "title": "Clon de Minecraft",
-        "technologies": ["typescript", "react", "css"],
-        "imgUrl": "/img/mineclone.webp",
-        "description": "Un clon de Minecraft basado en el tutorial de freeCodeCamp, usando Three.js (una librería para 2D/3D), React y TypeScript.",
-        "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
-        "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
-      },
-      {
-        "id": "proj-4",
-        "title": "Tic-Tac-Toe",
-        "technologies": ["js", "css", "html"],
-        "imgUrl": "/img/tictactoe.webp",
-        "description": "En esta versión del conocido Tic-Tac-Toe (o Ta-Te-Ti), puedes jugar contra la máquina, almacenar tus puntos localmente para jugar más tarde, cambiar los colores de los jugadores y otras características divertidas.",
-        "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
-        "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
-      },
-      {
-        "id": "proj-5",
-        "title": "Conectar Cuatro",
-        "technologies": ["react", "typescript", "css"],
-        "imgUrl": "/img/connect-four.webp",
-        "description": "Mi version del juego \"Conectar Cuatro\", implementando POO con TypeScript y separando la lógica de la vista.",
-        "repoUrl": "https://github.com/GenaroIBC/connect-four",
-        "projectUrl": "https://connect-four-mauve.vercel.app/"
-      },
-      {
-        "id": "proj-6",
-        "title": "Crypto Cosas",
-        "technologies": ["react", "next", "css"],
-        "imgUrl": "/img/crypto-assets.webp",
-        "description": "Un simple dashboard para ver las transacciones de tu crypto address, con un diseño minimalista basado en las guías de estílo de Material Design.",
-        "repoUrl": "https://github.com/CollaborativeTeam/challenge",
-        "projectUrl": "https://challenge-cyan.vercel.app/"
-      }
-    ],
     "TITLE": "Mis proyectos",
     "SUBTITLE": "Algunos proyectos en los que he trabajado:",
-    "ACCORDION_TITLE": "Descripción"
+    "ACCORDION_TITLE": "Descripción",
+    "PROJECTS_LIST": {
+      "IKODI": {
+        "TITLE": "IKodi",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "IKodi es mi blog personal, donde comparto mi conocimiento escribiendo artículos sobre diferentes herramientas, tecnologías y conceptos relacionados con el mundo del desarrollo web."
+      },
+      "FULL_STACK_TODO": {
+        "TITLE": "Full-Stack To-Do",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "La típica aplicación de tareas, pero abarcando tanto el lado del cliente como del servidor, con autenticación de usuarios y persistencia de los datos con MongoDB."
+      },
+      "MINECRAFT_CLONE": {
+        "TITLE": "Clon de Minecraft",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "Un clon de Minecraft basado en el tutorial de freeCodeCamp, usando Three.js (una librería para 2D/3D), React y TypeScript."
+      },
+      "TIC_TAC_TOE": {
+        "TITLE": "Tic-Tac-Toe",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "En esta versión del conocido Tic-Tac-Toe (o Ta-Te-Ti), puedes jugar contra la máquina, almacenar tus puntos localmente para jugar más tarde, cambiar los colores de los jugadores y otras características divertidas."
+      },
+      "CONNECT_FOUR": {
+        "TITLE": "Conectar Cuatro",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "Mi version del juego \"Conectar Cuatro\", implementando POO con TypeScript y separando la lógica de la vista."
+      },
+      "CRYPTO_ASSETS": {
+        "TITLE": "Cripto Cosas",
+        "DESCRIPTION_TITLE": "descripción",
+        "DESCRIPTION": "Un simple dashboard para ver las transacciones de tu crypto address, con un diseño minimalista basado en las guías de estílo de Material Design."
+      }
+    }
   },
   "SKILLS_SECT": {
-    "SOFT_SKILLS_LIST": [
-      {
+    "SOFT_SKILLS_LIST": {
+      "0": {
         "title": "📈 Mentalidad de crecimiento",
         "content": "Siempre estoy buscando innovar y crecer como persona y profesional."
       },
-      {
+      "1": {
         "title": "🚀 Nunca parar de aprender",
         "content": "Creo que el aprendizaje es para toda la vida. Me encanta aprender de todos sobre todo."
       },
-      {
+      "2": {
         "title": "🚅 Rápida adaptacion al cambio",
         "content": "El cambio es una buena oportunidad para ver las cosas con perspectiva e incluso cambiar tu enfoque."
       },
-      {
+      "3": {
         "title": "🖌️ Curioso y creativo",
         "content": "Me gusta incluso romper algo para aprender como funciona (no te preocupes, siempre en una rama aparte 😉)."
       }
-    ],
-    "HARD_SKILLS_LIST": [
-      {
-        "title": "🧠 I know",
-        "items": [
-          "html",
-          "css",
-          "js",
-          "react",
-          "node",
-          "git",
-          "next",
-          "bootstrap",
-          "mongodb"
-        ]
+    },
+    "HARD_SKILLS_LIST": {
+      "0": {
+        "title": "🧠 Sé"
       },
-      {
-        "title": "🌱  I'm learning",
-        "items": ["typescript"]
+      "1": {
+        "title": "🌱  Estoy aprendiendo"
       },
-      {
-        "title": "🔎 I'm interested in",
-        "items": ["python", "aws", "blockchain"]
+      "2": {
+        "title": "🔎 Estoy interesado en"
       }
-    ],
+    },
     "TITLE": "Habilidades",
     "SUBTITLE_1": "Stack de tecnologías:",
     "SUBTITLE_2": "Habilidades blandas:"
   },
   "CONTACT_SECT": {
-    "TITLE": "Contact Me",
-    "SUBTITLE": "Let's build something amazing!"
+    "TITLE": "Contáctame",
+    "SUBTITLE": "Construyamos algo increible!"
   },
   "FOOTER_SECT": {
-    "PGPH_1": "Developed by",
-    "PGPH_2": "in 2022",
-    "PGPH_3": "View repository"
+    "PGPH_1": "Desarrollado por",
+    "PGPH_2": "en 2022",
+    "PGPH_3": "Ver repositorio"
   }
 }

@@ -21,65 +21,41 @@
     "PGPH_5": ", where we are developing web sites for NGOs and foundations that help other people and don't have web presence."
   },
   "PROJECTS_SECT": {
-    "PROJECTS_LIST": [
-      {
-        "id": "proj-1",
-        "title": "IKodi",
-        "technologies": ["next", "react", "css"],
-        "imgUrl": "/img/ikodi.webp",
-        "description": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development.",
-        "repoUrl": "https://github.com/GenaroIBC/ikodi",
-        "projectUrl": "https://ikodi.vercel.app/"
-      },
-      {
-        "id": "proj-2",
-        "title": "Full-Stack ToDo app",
-        "technologies": ["next", "react", "css", "mongodb"],
-        "imgUrl": "/img/fullstack-todo.webp",
-        "description": "The typical ToDo application, but integrating both client and server sides, with users authentication and data persistence with MongoDB.",
-        "repoUrl": "https://github.com/GenaroIBC/fullstack-todo-app",
-        "projectUrl": "https://fullstack-todo-app-ten.vercel.app/tasks"
-      },
-      {
-        "id": "proj-3",
-        "title": "Minecraft Clone",
-        "technologies": ["typescript", "react", "css"],
-        "imgUrl": "/img/mineclone.webp",
-        "description": "A Minecraft clone based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript.",
-        "repoUrl": "https://github.com/GenaroIBC/minecraft-clone",
-        "projectUrl": "https://minecraft-clone-hwmx.vercel.app/"
-      },
-      {
-        "id": "proj-4",
-        "title": "Tic-Tac-Toe",
-        "technologies": ["js", "css", "html"],
-        "imgUrl": "/img/tictactoe.webp",
-        "description": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features.",
-        "repoUrl": "https://github.com/GenaroIBC/tic-tac-toe",
-        "projectUrl": "https://genaroibc.github.io/tic-tac-toe"
-      },
-      {
-        "id": "proj-5",
-        "title": "Connect Four",
-        "technologies": ["react", "typescript", "css"],
-        "imgUrl": "/img/connect-four.webp",
-        "description": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view.",
-        "repoUrl": "https://github.com/GenaroIBC/connect-four",
-        "projectUrl": "https://connect-four-mauve.vercel.app/"
-      },
-      {
-        "id": "proj-6",
-        "title": "Crypto Assets",
-        "technologies": ["react", "next", "css"],
-        "imgUrl": "/img/crypto-assets.webp",
-        "description": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines.",
-        "repoUrl": "https://github.com/CollaborativeTeam/challenge",
-        "projectUrl": "https://challenge-cyan.vercel.app/"
-      }
-    ],
     "TITLE": "My projects",
     "SUBTITLE": "Some projects i've worked in:",
-    "ACCORDION_TITLE": "Description"
+    "ACCORDION_TITLE": "Description",
+    "PROJECTS_LIST": {
+      "IKODI": {
+        "TITLE": "IKodi",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "IKodi is my personal blog, where I share my knowledge writting posts about different tools, technologies and concepts related to the world of web development."
+      },
+      "FULL_STACK_TODO": {
+        "TITLE": "Full-Stack To-Do",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "The typical To-Do application, but integrating both client and server sides, with users authentication and data persistence with MongoDB."
+      },
+      "MINECRAFT_CLONE": {
+        "TITLE": "Minecraft Clone",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "A Minecraft clone based on the freeCodeCamp tutorial, using Three.js (a 2D/3D JavaScript library), React and TypeScript."
+      },
+      "TIC_TAC_TOE": {
+        "TITLE": "Tic-Tac-Toe",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "In this version of the well-known Tic-Tac-Toe, you can play versus the machine, store your points locally to play later, change players colors and some other funny features."
+      },
+      "CONNECT_FOUR": {
+        "TITLE": "Connect Four",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "My version of the \"Connect Four\" game, implementing OOP with TypeScript and separating logic from view."
+      },
+      "CRYPTO_ASSETS": {
+        "TITLE": "Crypto Assets",
+        "DESCRIPTION_TITLE": "description",
+        "DESCRIPTION": "A simple dashboard to view your crypto address's transactions, with a minimalist design based on Material Design style guidelines."
+      }
+    }
   },
   "SKILLS_SECT": {
     "SOFT_SKILLS_LIST": [
