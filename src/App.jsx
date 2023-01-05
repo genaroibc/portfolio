@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { useObserver } from "./hooks/useObserver";
 import { useEffect } from "react";
 import { Suspense } from "react";
+import { Loader } from "./components/shared/Loader";
 
 function App() {
   const { entries, setElements } = useObserver({
@@ -26,7 +27,7 @@ function App() {
   }, [entries]);
 
   return (
-    <Suspense fallback="loading...">
+    <Suspense fallback={<Loader />}>
       <Header />
       <Hero />
       <About />
