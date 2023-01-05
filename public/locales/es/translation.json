@@ -28,7 +28,7 @@
       "IKODI": {
         "TITLE": "IKodi",
         "DESCRIPTION_TITLE": "descripción",
-        "DESCRIPTION": "IKodi es mi blog personal, donde comparto mi conocimiento escribiendo artículos sobre diferentes herramientas, tecnologías y conceptos relacionados con el mundo del desarrollo web."
+        "DESCRIPTION": "IKodi es mi blog personal, donde comparto mi conocimiento escribiendo artículos sobre diferentes herramientas, tecnologías y conceptos relacionados con el mundo del desarrollo web. Con sistema de comentarios incluido!"
       },
       "FULL_STACK_TODO": {
         "TITLE": "Full-Stack To-Do",
@@ -38,7 +38,7 @@
       "MINECRAFT_CLONE": {
         "TITLE": "Clon de Minecraft",
         "DESCRIPTION_TITLE": "descripción",
-        "DESCRIPTION": "Un clon de Minecraft basado en el tutorial de freeCodeCamp, usando Three.js (una librería para 2D/3D), React y TypeScript."
+        "DESCRIPTION": "Un clon de Minecraft completamente funcional, basado en el tutorial de freeCodeCamp, usando Three.js (una biblioteca para 2D/3D), React y TypeScript."
       },
       "TIC_TAC_TOE": {
         "TITLE": "Tic-Tac-Toe",

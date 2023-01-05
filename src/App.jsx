@@ -19,7 +19,7 @@ function App() {
       setElements(sections);
     };
 
-    const observeElementsTimeout = setTimeout(observeElements, 3000);
+    const observeElementsTimeout = setTimeout(observeElements, 2000);
 
     return () => {
       clearTimeout(observeElementsTimeout);

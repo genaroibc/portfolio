@@ -136,7 +136,6 @@ function Projects() {
         {projectsList.map(
           (
             {
-              description,
               id,
               imgUrl,
               projectUrl = "#",
