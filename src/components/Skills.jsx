@@ -1,88 +1,38 @@
-import { Icon } from "./shared/Icon";
 import { STSectionTitle, STSubTitle } from "./shared/STComponents";
-import {
-  interestedIn,
-  learned,
-  learning,
-} from "../assets/techStackConfig.json";
-import { v4 as uuid } from "uuid";
-import styled from "styled-components";
 import { Accordion } from "./shared/Accordion";
-import SOFT_SKILLS_DATA from "../assets/softSkills.json";
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
+import { HARD_SKILLS_LIST, SOFT_SKILLS_LIST } from "../assets/skillsList.json";
 
-const STIconListItem = styled.li`
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-
-  font-size: 1.3rem;
-
-  padding: 1rem;
-  margin: 0.3rem;
-
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-`;
-
-const HARD_SKILLS_DATA = [
-  {
-    title: "🧠 I know",
-    description: (
-      <ul>
-        {learned.map(el => (
-          <STIconListItem key={uuid()}>
-            <Icon title={el} />
-            {el.toUpperCase()}
-          </STIconListItem>
-        ))}
-      </ul>
-    ),
-  },
-  {
-    title: "🌱  I'm learning",
-    description: (
-      <ul>
-        {learning.map(el => (
-          <STIconListItem key={uuid()}>
-            <Icon title={el} />
-            {el.toUpperCase()}
-          </STIconListItem>
-        ))}
-      </ul>
-    ),
-  },
-  {
-    title: "🔎 I'm interested in",
-    description: (
-      <ul>
-        {interestedIn.map(el => (
-          <STIconListItem key={uuid()}>
-            <Icon title={el} />
-            {el.toUpperCase()}
-          </STIconListItem>
-        ))}
-      </ul>
-    ),
-  },
-];
+import { TechStackList } from "./TechStackList";
 
 function Stack() {
+  const { t } = useTranslation();
+
   return (
     <section className="animated-section" id="skills">
-      <STSectionTitle>Skills</STSectionTitle>
-      <STSubTitle>Stack of technologies:</STSubTitle>
+      <STSectionTitle>{t("SKILLS_SECT.TITLE")}</STSectionTitle>
+      <STSubTitle>{t("SKILLS_SECT.SUBTITLE_1")}</STSubTitle>
 
       <Accordion
         style={{ backgroundColor: "var(--terciary-color)", color: "#fff" }}
         multiple={true}
-        data={HARD_SKILLS_DATA}
+        data={HARD_SKILLS_LIST.map(({ items }, i) => ({
+          title: t(`SKILLS_SECT.HARD_SKILLS_LIST.${i}.title`),
+          content: <TechStackList items={items} />
+        }))}
       />
 
-      <STSubTitle margin="5rem auto 3rem">Soft Skills:</STSubTitle>
+      <STSubTitle margin="5rem auto 3rem">
+        {t("SKILLS_SECT.SUBTITLE_2")}
+      </STSubTitle>
 
-      <Accordion data={SOFT_SKILLS_DATA} />
+      <Accordion
+        data={SOFT_SKILLS_LIST.map((_, i) => ({
+          content: t(`SKILLS_SECT.SOFT_SKILLS_LIST.${i}.content`),
+          title: t(`SKILLS_SECT.SOFT_SKILLS_LIST.${i}.title`)
+        }))}
+      />
     </section>
   );
 }

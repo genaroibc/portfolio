@@ -5,15 +5,13 @@ import {
   STPicture,
   STSubTitle
 } from "./shared/STComponents";
-
 import { Accordion } from "./shared/Accordion";
 import { Icon } from "./shared/Icon";
-
 import { v4 as uuid } from "uuid";
-
 import styled from "styled-components";
-import projectsConfig from "../assets/projectsConfig.json";
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
+import projectsList from "../assets/projectsList.json";
 
 const SLIDER_CLASS = "slider-visible";
 
@@ -128,12 +126,14 @@ function Projects() {
     document.getElementById(id).classList.add(`${SLIDER_CLASS}`);
   };
 
+  const { t } = useTranslation();
+
   return (
     <section className="animated-section" id="projects">
-      <STSectionTitle>My projects</STSectionTitle>
-      <STSubTitle>Some projects i've worked in:</STSubTitle>
+      <STSectionTitle>{t("PROJECTS_SECT.TITLE")}</STSectionTitle>
+      <STSubTitle>{t("PROJECTS_SECT.SUBTITLE")}</STSubTitle>
       <div style={{ position: "relative" }}>
-        {projectsConfig.map(
+        {projectsList.map(
           (
             {
               description,
@@ -145,56 +145,59 @@ function Projects() {
               title
             },
             index
-          ) => (
-            <STSlide
-              key={uuid()}
-              className={index === 0 ? SLIDER_CLASS : ""}
-              id={id}
-            >
-              <STSlidePicture>
-                <div>
-                  <a target="_blank" href={repoUrl}>
-                    <img src="/svg/sourcecode.svg" />
-                  </a>
-                  <a target="_blank" href={projectUrl}>
-                    <img src="/svg/newtab.svg" />
-                  </a>
-                </div>
-                <STImg src={imgUrl} alt="project preview" />
-              </STSlidePicture>
+          ) => {
+            const TRANSL_PREFIX = `PROJECTS_SECT.PROJECTS_LIST.${title}`;
+            return (
+              <STSlide
+                key={uuid()}
+                className={index === 0 ? SLIDER_CLASS : ""}
+                id={id}
+              >
+                <STSlidePicture>
+                  <div>
+                    <a target="_blank" href={repoUrl}>
+                      <img src="/svg/sourcecode.svg" />
+                    </a>
+                    <a target="_blank" href={projectUrl}>
+                      <img src="/svg/newtab.svg" />
+                    </a>
+                  </div>
+                  <STImg src={imgUrl} alt="project preview" />
+                </STSlidePicture>
 
-              <STFlexCont gap="1rem" flexDir="column" margin={0}>
-                <STSubTitle
-                  fontWeight={500}
-                  margin="0.5rem auto"
-                  fontSize="2.5rem"
-                >
-                  {title}
-                </STSubTitle>
+                <STFlexCont gap="1rem" flexDir="column" margin={0}>
+                  <STSubTitle
+                    fontWeight={500}
+                    margin="0.5rem auto"
+                    fontSize="2.5rem"
+                  >
+                    {t(`${TRANSL_PREFIX}.TITLE`)}
+                  </STSubTitle>
 
-                <Accordion
-                  multiple={true}
-                  data={[
-                    {
-                      title: "Description",
-                      description
-                    }
-                  ]}
-                />
+                  <Accordion
+                    multiple={true}
+                    data={[
+                      {
+                        content: t(`${TRANSL_PREFIX}.DESCRIPTION`),
+                        title: t(`${TRANSL_PREFIX}.DESCRIPTION_TITLE`)
+                      }
+                    ]}
+                  />
 
-                <STIconsCont smFlexDir="row">
-                  {technologies.map(item => (
-                    <STIcon key={uuid()}>
-                      <Icon className="animated" title={item}></Icon>
-                    </STIcon>
-                  ))}
-                </STIconsCont>
-              </STFlexCont>
-            </STSlide>
-          )
+                  <STIconsCont smFlexDir="row">
+                    {technologies.map(item => (
+                      <STIcon key={uuid()}>
+                        <Icon className="animated" title={item}></Icon>
+                      </STIcon>
+                    ))}
+                  </STIconsCont>
+                </STFlexCont>
+              </STSlide>
+            );
+          }
         )}
         <StNav>
-          {projectsConfig.map(({ id }, index) => (
+          {projectsList.map(({ id }, index) => (
             <button
               aria-label="projects navigation bar"
               key={uuid()}
