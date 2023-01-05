@@ -1,0 +1,44 @@
+{
+  "SOFT_SKILLS_LIST": [
+    {
+      "title": "📈 Mentalidad de crecimiento",
+      "content": "Siempre estoy buscando innovar y crecer como persona y profesional."
+    },
+    {
+      "title": "🚀 Nunca parar de aprender",
+      "content": "Creo que el aprendizaje es para toda la vida. Me encanta aprender de todos sobre todo."
+    },
+    {
+      "title": "🚅 Rápida adaptacion al cambio",
+      "content": "El cambio es una buena oportunidad para ver las cosas con perspectiva e incluso cambiar tu enfoque."
+    },
+    {
+      "title": "🖌️ Curioso y creativo",
+      "content": "Me gusta incluso romper algo para aprender como funciona (no te preocupes, siempre en una rama aparte 😉)."
+    }
+  ],
+  "HARD_SKILLS_LIST": [
+    {
+      "title": "🧠 I know",
+      "items": [
+        "html",
+        "css",
+        "js",
+        "react",
+        "node",
+        "git",
+        "next",
+        "bootstrap",
+        "mongodb"
+      ]
+    },
+    {
+      "title": "🌱  I'm learning",
+      "items": ["typescript"]
+    },
+    {
+      "title": "🔎 I'm interested in",
+      "items": ["python", "aws", "blockchain"]
+    }
+  ]
+}
