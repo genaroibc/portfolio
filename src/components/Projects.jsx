@@ -5,7 +5,6 @@ import {
   STPicture,
   STSubTitle
 } from "./shared/STComponents";
-import { Accordion } from "./shared/Accordion";
 import { Icon } from "./shared/Icon";
 import { v4 as uuid } from "uuid";
 import styled from "styled-components";
@@ -78,12 +77,17 @@ const STIcon = styled.i`
 `;
 
 const STSlidePicture = styled(STPicture)`
-  position: relative;
-  overflow: hidden;
+  max-width: 500px;
+  max-height: 500px;
 
-  max-width: 100%;
+  align-self: center;
 
-  div {
+  & > div {
+    position: relative;
+    overflow: hidden;
+  }
+
+  & > div div {
     position: absolute;
 
     text-align: center;
@@ -115,6 +119,12 @@ const STSlidePicture = styled(STPicture)`
   &:hover div {
     transform: translateY(0);
   }
+`;
+
+const STProjectDescription = styled.p`
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 5px;
 `;
 
 function Projects() {
@@ -154,14 +164,17 @@ function Projects() {
               >
                 <STSlidePicture>
                   <div>
-                    <a target="_blank" href={repoUrl}>
-                      <img src="/svg/sourcecode.svg" />
-                    </a>
-                    <a target="_blank" href={projectUrl}>
-                      <img src="/svg/newtab.svg" />
-                    </a>
+                    <div>
+                      <a target="_blank" href={repoUrl}>
+                        <img src="/svg/sourcecode.svg" />
+                      </a>
+                      <a target="_blank" href={projectUrl}>
+                        <img src="/svg/newtab.svg" />
+                      </a>
+                    </div>
+
+                    <STImg src={imgUrl} alt="project preview" />
                   </div>
-                  <STImg src={imgUrl} alt="project preview" />
                 </STSlidePicture>
 
                 <STFlexCont gap="1rem" flexDir="column" margin={0}>
@@ -173,15 +186,9 @@ function Projects() {
                     {t(`${TRANSL_PREFIX}.TITLE`)}
                   </STSubTitle>
 
-                  <Accordion
-                    multiple={true}
-                    data={[
-                      {
-                        content: t(`${TRANSL_PREFIX}.DESCRIPTION`),
-                        title: t(`${TRANSL_PREFIX}.DESCRIPTION_TITLE`)
-                      }
-                    ]}
-                  />
+                  <STProjectDescription>
+                    {t(`${TRANSL_PREFIX}.DESCRIPTION`)}
+                  </STProjectDescription>
 
                   <STIconsCont smFlexDir="row">
                     {technologies.map(item => (

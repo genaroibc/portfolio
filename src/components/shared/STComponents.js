@@ -44,7 +44,13 @@ export const STImg = styled.img`
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0px 5px 10px 5px #0005;
+
   width: 100%;
+
+  max-width: 500px;
+  min-width: 500px;
+
+  display: block;
 
   ${({ rounded }) =>
     rounded &&
@@ -69,7 +75,7 @@ export const STFlexCont = styled.div`
   border-radius: 5px;
   background-color: ${({ bgCol }) => bgCol ?? "var(--terciary-color)"};
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 1200px) {
     flex-direction: ${({ flexDir }) => flexDir ?? "initial"};
     justify-content: ${({ jusCont }) => jusCont ?? "initial"};
     align-items: ${({ alItems }) => alItems ?? "initial"};
