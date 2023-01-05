@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { v4 as uuid } from "uuid";
 import { useTranslation } from "react-i18next";
-import { changeLanguage } from "i18next";
 import headerLinks from "../assets/headerLinks";
+import { LanguageBox } from "./shared/LanguageBox";
 
 const STHeader = styled.header`
   position: fixed;
@@ -167,15 +167,13 @@ export default function Header() {
 
   return (
     <STHeader>
-      <button onClick={() => changeLanguage("en")}>EN</button>
-      <button onClick={() => changeLanguage("es")}>ES</button>
-
       <STNav id="hamburger-menu">
         {headerLinks.map(({ href, title }) => (
           <a key={uuid()} onClick={closeMenu} href={href}>
             {t(`HEADER_SECT.LINKS_LIST.${title}`)}
           </a>
         ))}
+        <LanguageBox />
       </STNav>
       <STHamburgerBtn
         aria-label="navigation bar menu"
