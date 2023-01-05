@@ -28,7 +28,7 @@ const STHeader = styled.header`
       top: unset;
     }
 
-    #hamburguer-menu-button {
+    #hamburger-menu-btn {
       display: none;
     }
 
