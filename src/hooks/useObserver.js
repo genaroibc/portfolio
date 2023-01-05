@@ -13,11 +13,13 @@ export function useObserver(config = {}) {
 
   useEffect(() => {
     const { current: currentObserver } = observer;
+
     currentObserver.disconnect();
 
     if (elements.length > 0) {
       elements.forEach(el => currentObserver.observe(el));
     }
+
     return () => {
       if (currentObserver) {
         currentObserver.disconnect();

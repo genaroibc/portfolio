@@ -11,13 +11,19 @@ import { Suspense } from "react";
 import { Loader } from "./components/shared/Loader";
 
 function App() {
-  const { entries, setElements } = useObserver({
-    rootMargin: "-160px"
-  });
+  const { entries, setElements } = useObserver({});
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section.animated-section");
-    setElements(sections);
+    const observeElements = () => {
+      const sections = document.querySelectorAll("section.animated-section");
+      setElements(sections);
+    };
+
+    const observeElementsTimeout = setTimeout(observeElements, 3000);
+
+    return () => {
+      clearTimeout(observeElementsTimeout);
+    };
   }, [setElements]);
 
   useEffect(() => {
