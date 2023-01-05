@@ -20,8 +20,8 @@ export function LanguageBox() {
   return (
     <STForm onChange={e => changeLanguage(e.target.value)}>
       <select name="lang" id="lang">
-        <option value="es">🇪🇸 Español</option>
         <option value="en">🇺🇸 English</option>
+        <option value="es">🇪🇸 Español</option>
       </select>
     </STForm>
   );
