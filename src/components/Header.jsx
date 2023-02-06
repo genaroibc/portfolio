@@ -188,6 +188,26 @@ export default function Header() {
         <span></span>
         <span></span>
       </STHamburgerBtn>
+      <p
+        style={{
+          position: "absolute",
+          top: "4rem",
+          textAlign: "center",
+          margin: 0,
+          left: 0,
+          width: "100%",
+          padding: "1rem",
+          backgroundColor: "var(--secondary-color)"
+        }}
+      >
+        This is my old portfolio.{" "}
+        <a
+          style={{ textDecoration: "underline" }}
+          href="https://genaro-bonavita.vercel.app/"
+        >
+          Visit the new one here!
+        </a>
+      </p>
     </STHeader>
   );
 }
